@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="style.css" rel="stylesheet" />
+<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="style/css" />
 <title>OpenELIS Foundation</title>
 </head>
 
