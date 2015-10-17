@@ -1,6 +1,6 @@
     <!-- Begin Primary Aside -->
     <aside id="primary">
-        <h2><?php echo get_the_title($post->post_parent); // Get the gateway page title ?></h2>
+        <h2><a href="<?= get_permalink($post->post_parent) ?>"><?= get_the_title($post->post_parent) // Get the gateway page title ?></a></h2>
         <nav id="nav-sub">
             <ul><?php if ($post->post_parent) { // Check if the page has a parent...
     wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => __(''))); // if so, list the sub-pages with no title
