@@ -13,6 +13,25 @@ body{
 	color: hsla(187,93%,23%,1.00);
 }
 
+/* FOR DEVELOPMENT ONLY */
+
+/*body{
+	background-image: url(images/bg-940-grid.jpg);
+	background-repeat: repeat-y;
+	background-position: 50%;
+}
+
+div, header, aside, footer, nav{
+	border: 1px solid red;
+}
+
+.line-length{
+	color: red;
+}*/
+
+/* END DEVELOPMENT ONLY */
+
+
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
