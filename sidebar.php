@@ -1,15 +1,13 @@
     <!-- Begin Primary Aside -->
-    <aside id="primary">
-        <?php if (is_page()) : ?>
-        
+    <aside id="primary"> 
+        <?php if(is_page()){
+        $parent_page = get_top_parent_page_id($post_ID); ?>
         <nav id="nav-sub">
-            <h2><a href="<?= get_permalink($post->post_parent) ?>"><?= get_the_title($post->post_parent) // Get the gateway page title ?></a></h2>
-            <ul><?php if ($post->post_parent) { // Check if the page has a parent...
-    wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => __(''))); // if so, list the sub-pages with no title
-    } else { // Check if the page does not have a parent
-    wp_list_pages(array('child_of' => $post->ID, 'title_li' => __(''))); // if so, list the sub-pages with no title
-    } ?></ul>
+            <h2><a href="<?php echo get_the_permalink($parent_page); ?>"><?php echo get_the_title($parent_page); ?></a></h2>
+            <ul>
+                <?php wp_list_pages("child_of=$parent_page&title_li="); ?>
+            </ul>
         </nav>
-<?php endif; ?>
+        <?php } ?>
     </aside> 
     <!-- End Primary Aside -->
