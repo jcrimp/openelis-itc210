@@ -1,9 +1,25 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="style/css" />
 <title><?php bloginfo('name'); ?></title>
+    
+<meta charset="UTF-8">
+    
+<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="style/css" />
+<link href="<?php bloginfo('template_directory'); ?>/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/jquery.flexslider-min.js"></script> 
+    
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.flexslider').flexslider({
+            animation: "fade",
+            slideshow: false,
+        });
+    })
+</script>
+
     
 <!-- Begin WP Head -->
 <?php wp_head(); ?> 

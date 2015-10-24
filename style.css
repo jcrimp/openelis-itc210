@@ -2,10 +2,25 @@
 
 /* 
 Theme Name: OpenELIS Theme
+
 Author: Jenny Crimp, Maddy Homem, Jan Talaro, and Flair Li
+
 Author URI: https://github.com/jcrimp/openelis-itc210
+
 Description: A theme for the OpenELIS Foundation, created as a capstone project for ITC/WEB210 at Seattle Central College.
+
 Version: 1.0
+
+Plugins Used: 
+    Leaflet Maps: https://wordpress.org/plugins/leaflet-map/
+        Used to allow the author to add Leaflet Maps with multiple
+        points using shortcode in the Posts or Pages WYSIWYG editor. 
+        Use the "Leaflet Map" tab in the admin to edit default map settings.
+
+Also Used (packaged with the theme, no installation required): 
+    FlexSlider 2: http://flexslider.woothemes.com/
+        Used to display image slideshows, and a carousel of
+        recent news post thumbnails and titles.
 */
 
 body{
@@ -138,3 +153,9 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+img.wp-post-image {}
+img.attachment-thumbnail {}
+img.attachment-medium {}
+img.attachment-large {}
+img.attachment-full {}
