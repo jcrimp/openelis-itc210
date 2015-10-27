@@ -27,9 +27,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+<header>
+    <h1>
+        <a href="<?=home_url()?>">
+            <img src="http://placehold.it/200x100" alt="OpenELIS Logo" class="logo" />
+        </a>
+    </h1>
+    <?php get_search_form(); ?>
+</header>
 <!-- Begin Main Navigation -->
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'nav','container_id' => 'nav-main' ) ); ?>    
 <!-- End Main Navigation -->
-
 <!-- Begin main div -->
 <div id="main"> 

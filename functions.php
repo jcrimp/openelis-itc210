@@ -4,6 +4,13 @@ register_nav_menus( array(
     'main-menu' => __('Main'), 
 ));
 
+register_sidebar(array(
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>'
+));
+
 add_theme_support('post-thumbnails');
 
 function get_top_parent_page_id() {
