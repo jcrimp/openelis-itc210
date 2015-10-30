@@ -17,6 +17,31 @@
             animation: "fade",
             slideshow: false,
         });
+        
+        function close_accordion_section() {
+        $('.accordion .accordion-section-title').removeClass('active');
+		$('.accordion .accordion-section-title span').text('+');
+        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    }
+ 
+    $('.accordion-section-title').click(function(e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).attr('href');
+ 
+        if($(e.target).is('.active')) {
+            close_accordion_section();
+        }else {
+            close_accordion_section();
+ 
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+			$('.accordion .accordion-section-title span').text('-'); 
+        }
+ 
+        e.preventDefault();
+    });
     })
 </script>
 
@@ -28,12 +53,23 @@
 
 <body <?php body_class(); ?>>
 <header>
+    <!-- Begin header social nav -->
+    <nav class="nav-social">
+        <ul>
+            <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-blue-80.png" alt="Facebook" /></a></li>
+            <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-blue-80.png" alt="Twitter" /></a></li>
+        </ul>
+    </nav>
+    <!-- End header social nav -->
+    
+    <?php get_search_form(); ?>
+    
     <h1>
         <a href="<?=home_url()?>">
             <img src="http://placehold.it/200x100" alt="OpenELIS Logo" class="logo" />
         </a>
     </h1>
-    <?php get_search_form(); ?>
+    
 </header>
 <!-- Begin Main Navigation -->
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'nav','container_id' => 'nav-main' ) ); ?>    

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     
-<?php get_sidebar(); ?>
+<?php get_sidebar_if_children(); ?>
     
     <!-- Start Content -->
     <div id="content">

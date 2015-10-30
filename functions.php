@@ -2,6 +2,14 @@
 
 register_nav_menus( array(
     'main-menu' => __('Main'), 
+    'footer-menu' => __('Footer')
+));
+
+register_sidebar(array(
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>', 
+    'before_title' => '<h4>', 
+    'after_title' => '</h4>'
 ));
 
 register_sidebar(array(
@@ -56,4 +64,13 @@ function add_flexslider() { // Display attachment images as a flexslider gallery
     } // End if
     
 } // End add_flexslider()
+
+function get_sidebar_if_children() {
+    global $post;
+    $children = get_pages('child_of='.$post->ID);
+    if( count( $children ) != 0 ) {
+        get_sidebar();
+    }
+} // End get_sidebar_if_children()
+
 ?>

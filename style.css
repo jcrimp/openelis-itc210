@@ -22,6 +22,12 @@ Plugins Used:
         insert them into Pages via shortcode in the WYSIWYG editor.
         Use the "Contact" tab in the admin to edit forms and mail settings.
 
+    Newsletter: http://www.thenewsletterplugin.com/plugins/newsletter
+        Used to allow visitors to sign up for a newsletter via a widget. Use the "Newsletter" tab in the admin to edit settings and email newsletters to subscribers.
+
+    MetaSlider: https://www.metaslider.com/documentation/
+        Used to allow the editor to create and manage image slideshows, and either insert them in posts via shortcode, or by pasting code directly in the template. Use the MetaSlider tab in the admin to manage slidehows.
+
 Also Used (packaged with the theme, no installation required): 
     FlexSlider 2: http://flexslider.woothemes.com/
         Used to display image slideshows, and a carousel of
@@ -50,6 +56,14 @@ div, header, aside, footer, nav{
 }*/
 
 /* END DEVELOPMENT ONLY */
+
+.nav-social img{
+    width: 35px;
+}
+
+nav ul{
+    list-style-type: none;
+}
 
 
 /* =WordPress Core
@@ -164,3 +178,40 @@ img.attachment-thumbnail {}
 img.attachment-medium {}
 img.attachment-large {}
 img.attachment-full {}
+
+
+/* ACCORDION */
+
+.accordion {
+    overflow:hidden;
+    /*box-shadow:0px 1px 3px rgba(0,0,0,0.25);*/
+    /*border-radius:3px;*/
+   /* background:#f7f7f7;*/
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:5px 0;
+    display:inline-block;
+    transition:all linear 0.15s;
+    font-size:1.200em;
+	text-decoration: none;
+}
+ 
+.accordion-section-title.active, 
+.accordion-section-title:hover, 
+.accordion-section-title:focus, 
+.accordion-section-title:active{
+    text-decoration:none;
+}
+ 
+.accordion-section:last-child .accordion-section-title {
+    border-bottom: 1px solid #8F8F8F;
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px 0;
+    display:none;
+}
