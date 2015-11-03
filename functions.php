@@ -68,7 +68,8 @@ function add_flexslider() { // Display attachment images as a flexslider gallery
 function get_sidebar_if_children() {
     global $post;
     $children = get_pages('child_of='.$post->ID);
-    if( count( $children ) != 0 ) {
+    $ancestors = $post->ancestors;
+    if( count( $children ) != 0 || $ancestors ){
         get_sidebar();
     }
 } // End get_sidebar_if_children()
