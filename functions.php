@@ -43,8 +43,7 @@ function add_flexslider() { // Display attachment images as a flexslider gallery
     $attachments = get_children(array('post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'attachment', 'post_mime_type' => 'image', ));
     
     if ($attachments) { // If there are images attached to posting, use FlexSlider markup
-        
-        echo '<div class="flexslider">';
+        echo '<div class="flexslider spotlight">';
         echo '<ul class="slides">';
     
         foreach ( $attachments as $attachment_id => $attachment ) { // create the list items for images with captions
@@ -73,5 +72,15 @@ function get_sidebar_if_children() {
         get_sidebar();
     }
 } // End get_sidebar_if_children()
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

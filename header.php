@@ -13,35 +13,43 @@
     
 <script type="text/javascript">
     $(document).ready(function(){
-        $('.flexslider').flexslider({
-            animation: "fade",
-            slideshow: false,
-        });
+        $('.spotlight.flexslider').flexslider({
+            animation: "slide"
+  	    });
+        
+        $('.carousel.flexslider').flexslider({
+            animation: "slide",
+            animationLoop: false,
+            itemWidth: 160,
+            itemMargin: 20,
+            minItems: 2,
+            maxItems: 6
+  	     });
         
         function close_accordion_section() {
         $('.accordion .accordion-section-title').removeClass('active');
 		$('.accordion .accordion-section-title span').text('+');
         $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-    }
- 
-    $('.accordion-section-title').click(function(e) {
-        // Grab current anchor value
-        var currentAttrValue = $(this).attr('href');
- 
-        if($(e.target).is('.active')) {
-            close_accordion_section();
-        }else {
-            close_accordion_section();
- 
-            // Add active class to section title
-            $(this).addClass('active');
-            // Open up the hidden content panel
-            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-			$('.accordion .accordion-section-title span').text('-'); 
         }
- 
-        e.preventDefault();
-    });
+    
+        $('.accordion-section-title').click(function(e) {
+            // Grab current anchor value
+            var currentAttrValue = $(this).attr('href');
+    
+            if($(e.target).is('.active')) {
+                close_accordion_section();
+            }else {
+                close_accordion_section();
+    
+                // Add active class to section title
+                $(this).addClass('active');
+                // Open up the hidden content panel
+                $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+	   		$('.accordion .accordion-section-title span').text('-'); 
+            }
+    
+            e.preventDefault();
+        });
     })
 </script>
 
@@ -66,7 +74,7 @@
     
     <h1>
         <a href="<?=home_url()?>">
-            <img src="http://placehold.it/200x100" alt="OpenELIS Logo" class="logo" />
+            <img src="http://placehold.it/200x100?text=logo" alt="OpenELIS Logo" class="logo" />
         </a>
     </h1>
     
