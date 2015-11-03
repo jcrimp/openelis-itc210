@@ -3,9 +3,9 @@
  * Template Name: FAQ
  * Description: Page template for to-do list with nested repeating fields
  */
-get_header(); ?>
+get_header();
     
-<?php get_sidebar_if_children(); ?>
+php get_sidebar_if_children(); ?>
     
     <!-- Start Content -->
     <div id="content">

@@ -6,7 +6,7 @@
     <div id="content">
         <?php query_posts('posts_per_page=1');
         if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
-	        <h1><?php the_title(); // get the page or posting title ?></h1>
+        <h1><a href="<?php the_permalink();?>"><?php the_title(); // get the page or posting title ?></a></h1>
             <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?></small><br />
             <article><?php the_content(''); // get page or posting written content ?></article>
             <?php endwhile;
