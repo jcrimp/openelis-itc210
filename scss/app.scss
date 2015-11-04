@@ -1,0 +1,357 @@
+@import "settings";
+//@import "foundation";
+
+// Or selectively include components
+ @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+   "foundation/components/grid";
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+body{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* FOR DEVELOPMENT ONLY */
+
+/*body{
+	background-image: url(../images/bg-940-grid.jpg);
+	background-repeat: repeat-y;
+	background-position: 50%;
+}
+
+div, header, aside, footer, nav{
+	border: 1px solid red;
+}
+
+.line-length{
+	color: red;
+}*/
+
+/* END DEVELOPMENT ONLY */
+
+
+/* HEADER */
+
+header{
+    padding-top: 16px;
+}
+.nav-social{
+    float: right;
+    
+    ul{
+        margin-left: 0;
+        margin-top: 0;
+        padding-left: 0;
+    }
+    
+    li{
+        width: 35px;
+        float: left;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+} 
+
+.searchform{
+    float: right;
+}
+
+
+/* NAVIGATION */
+
+nav ul{
+    list-style-type: none;
+}
+
+
+/* NAV-MAIN */
+
+
+.nav{
+    padding-bottom: 16px;
+    
+    h1{
+        margin: 0;
+    }
+    
+    span{
+        display: none;
+    }
+}
+
+.logo{
+    width: 200px;
+    float: left;
+}
+
+#nav-main{
+    width: auto;
+    float: right;
+    margin-top: 78px;
+    
+    ul{
+        margin: 0;
+        padding: 0;
+        
+        ul{
+            display: none;
+        }
+    }
+    
+    li{
+        float: left;
+        margin-bottom: 0;
+        margin-right: 16px;
+        
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+    
+    a{
+        
+        &:link, 
+        &:visited{
+            text-decoration: none;
+            }
+    }
+}
+
+
+/* HOME PAGE */
+
+.home .center{
+    text-align: center;
+}
+
+.home .row h1, 
+.home .row h2{
+    
+    text-align: center;
+}
+
+#partners ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    li{
+        float: left;
+        width: 20%;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+
+/* TABS */
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+    text-align: center;
+          
+    li{
+      	background: none;
+      	display: inline-block;
+      	padding: 10px 15px;
+      	cursor: pointer;
+                
+        &.current{
+            border-bottom: 3px solid black;
+        }
+    }
+}
+          
+
+.tab-content{
+	display: none;
+    
+    &.current{
+        display: inherit;
+    }
+}
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+img.wp-post-image {}
+img.attachment-thumbnail {}
+img.attachment-medium {}
+img.attachment-large {}
+img.attachment-full {}
+
+
+/* ACCORDION */
+
+.accordion {
+    overflow:hidden;
+    /*box-shadow:0px 1px 3px rgba(0,0,0,0.25);*/
+    /*border-radius:3px;*/
+   /* background:#f7f7f7;*/
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:5px 0;
+    display:inline-block;
+    transition:all linear 0.15s;
+    font-size:1.200em;
+	text-decoration: none;
+}
+ 
+.accordion-section-title.active, 
+.accordion-section-title:hover, 
+.accordion-section-title:focus, 
+.accordion-section-title:active{
+    text-decoration:none;
+}
+ 
+.accordion-section:last-child .accordion-section-title {
+    border-bottom: 1px solid #8F8F8F;
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px 0;
+    display:none;
+}
+

@@ -1,11 +1,29 @@
-# openelis-itc210
+# Foundation Compass Template
 
-## A Wordpress site for the OpenELIS Foundation / Capstone project for ITC210
+The easiest way to get started with Foundation + Compass.
 
-Maddy Homem
+## Requirements
 
-Jan Talaro
+  * Ruby 1.9+
+  * [Node.js](http://nodejs.org)
+  * [compass](http://compass-style.org/): `gem install compass`
+  * [bower](http://bower.io): `npm install bower -g`
 
-Jenny Crimp
+## Quickstart
 
-Flair Li
+  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
+  * Run `bower install` to install the latest version of Foundation
+  
+Then when you're working on your project, just run the following command:
+
+```bash
+bundle exec compass watch
+```
+
+## Upgrading
+
+If you'd like to upgrade to a newer version of Foundation down the road just run:
+
+```bash
+bower update
+```
