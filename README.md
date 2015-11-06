@@ -1,29 +1,13 @@
-# Foundation Compass Template
+# OpenELIS Foundation Wordpress Theme
 
-The easiest way to get started with Foundation + Compass.
+## Seattle Central ITC/WEB 210 Capstone Project
 
-## Requirements
+A custom Wordpress theme designed and built for the OpenELIS Foundation
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
+### Contributors
+  * Jenny Crimp
+  * Jan Talaro
+  * Maddy Homem
+  * Flair Li
 
-## Quickstart
 
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
-
-```bash
-bundle exec compass watch
-```
-
-## Upgrading
-
-If you'd like to upgrade to a newer version of Foundation down the road just run:
-
-```bash
-bower update
-```

@@ -66,14 +66,18 @@ div, header, aside, footer, nav{
 
 header{
     padding-top: 16px;
+    
+    .nav-social{
+        float: right;
+    }
 }
 .nav-social{
-    float: right;
     
     ul{
         margin-left: 0;
         margin-top: 0;
         padding-left: 0;
+        overflow: hidden;
     }
     
     li{
@@ -93,6 +97,8 @@ header{
 
 nav ul{
     list-style-type: none;
+    padding: 0;
+    
 }
 
 
@@ -124,29 +130,105 @@ nav ul{
     ul{
         margin: 0;
         padding: 0;
-        
-        ul{
-            display: none;
-        }
+        text-align: center;
     }
     
     li{
         float: left;
         margin-bottom: 0;
         margin-right: 16px;
+        display: inline;
         
         &:last-of-type{
             margin-right: 0;
         }
+        
+        &:hover{
+            //border-bottom: 3px solid black;
+            
+            & ul.sub-menu{
+                display: block;
+            }
+        }
+        
+        ul{
+            position: absolute;
+            width: 160px;
+            background: white;
+            z-index: 900;
+            
+            li{
+                width: 160px;
+                
+                a{
+                    display: block;
+                }
+                
+                &:hover a{
+                    color: red;
+                }
+            }
+            
+            &.sub-menu{
+                display: none;
+            }
+        }
     }
     
     a{
-        
+        display: block;
+        padding: 4px 8px;
         &:link, 
         &:visited{
             text-decoration: none;
             }
     }
+}
+
+
+
+
+
+/* FOOTER-MENU */
+
+footer ul.menu > li.menu-item-has-children{
+    width: 20%;
+    float: left;
+    margin-right: 32px;
+}
+
+footer ul.menu > li  > a{
+    text-transform: uppercase;
+}
+
+footer .widget{
+    overflow: hidden;
+}
+
+/* BREADCRUMBS */
+#breadcrumbs{
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+    
+    li{
+        display:inline-block;
+        vertical-align:middle;
+        margin-right:15px;
+    }
+    
+    .separator{
+        font-size:18px;
+        font-weight:100;
+        color:#ccc;
+    }
+}
+
+
+/* SIDEBAR */
+
+.primary{
+    
 }
 
 

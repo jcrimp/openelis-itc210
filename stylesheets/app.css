@@ -1702,18 +1702,19 @@ div, header, aside, footer, nav{
 header {
   padding-top: 16px;
 }
-
 /* line 70, ../scss/app.scss */
-.nav-social {
+header .nav-social {
   float: right;
 }
-/* line 73, ../scss/app.scss */
+
+/* line 76, ../scss/app.scss */
 .nav-social ul {
   margin-left: 0;
   margin-top: 0;
   padding-left: 0;
+  overflow: hidden;
 }
-/* line 79, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 .nav-social li {
   width: 35px;
   float: left;
@@ -1721,86 +1722,156 @@ header {
   margin-bottom: 0;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .searchform {
   float: right;
 }
 
 /* NAVIGATION */
-/* line 94, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 nav ul {
   list-style-type: none;
+  padding: 0;
 }
 
 /* NAV-MAIN */
-/* line 102, ../scss/app.scss */
+/* line 108, ../scss/app.scss */
 .nav {
   padding-bottom: 16px;
 }
-/* line 105, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .nav h1 {
   margin: 0;
 }
-/* line 109, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .nav span {
   display: none;
 }
 
-/* line 114, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 .logo {
   width: 200px;
   float: left;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 #nav-main {
   width: auto;
   float: right;
   margin-top: 78px;
 }
-/* line 124, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 #nav-main ul {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
-/* line 128, ../scss/app.scss */
-#nav-main ul ul {
-  display: none;
-}
-/* line 133, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 #nav-main li {
   float: left;
   margin-bottom: 0;
   margin-right: 16px;
+  display: inline;
 }
-/* line 138, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 #nav-main li:last-of-type {
   margin-right: 0;
 }
-/* line 145, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
+#nav-main li:hover ul.sub-menu {
+  display: block;
+}
+/* line 154, ../scss/app.scss */
+#nav-main li ul {
+  position: absolute;
+  width: 160px;
+  background: white;
+  z-index: 900;
+}
+/* line 160, ../scss/app.scss */
+#nav-main li ul li {
+  width: 160px;
+}
+/* line 163, ../scss/app.scss */
+#nav-main li ul li a {
+  display: block;
+}
+/* line 167, ../scss/app.scss */
+#nav-main li ul li:hover a {
+  color: red;
+}
+/* line 172, ../scss/app.scss */
+#nav-main li ul.sub-menu {
+  display: none;
+}
+/* line 178, ../scss/app.scss */
+#nav-main a {
+  display: block;
+  padding: 4px 8px;
+}
+/* line 181, ../scss/app.scss */
 #nav-main a:link, #nav-main a:visited {
   text-decoration: none;
 }
 
+/* FOOTER-MENU */
+/* line 194, ../scss/app.scss */
+footer ul.menu > li.menu-item-has-children {
+  width: 20%;
+  float: left;
+  margin-right: 32px;
+}
+
+/* line 200, ../scss/app.scss */
+footer ul.menu > li > a {
+  text-transform: uppercase;
+}
+
+/* line 204, ../scss/app.scss */
+footer .widget {
+  overflow: hidden;
+}
+
+/* BREADCRUMBS */
+/* line 209, ../scss/app.scss */
+#breadcrumbs {
+  list-style: none;
+  margin: 10px 0;
+  overflow: hidden;
+}
+/* line 214, ../scss/app.scss */
+#breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/* line 220, ../scss/app.scss */
+#breadcrumbs .separator {
+  font-size: 18px;
+  font-weight: 100;
+  color: #ccc;
+}
+
+/* SIDEBAR */
 /* HOME PAGE */
-/* line 155, ../scss/app.scss */
+/* line 237, ../scss/app.scss */
 .home .center {
   text-align: center;
 }
 
-/* line 159, ../scss/app.scss */
+/* line 241, ../scss/app.scss */
 .home .row h1,
 .home .row h2 {
   text-align: center;
 }
 
-/* line 165, ../scss/app.scss */
+/* line 247, ../scss/app.scss */
 #partners ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 170, ../scss/app.scss */
+/* line 252, ../scss/app.scss */
 #partners ul li {
   float: left;
   width: 20%;
@@ -1809,85 +1880,85 @@ nav ul {
 }
 
 /* TABS */
-/* line 180, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 ul.tabs {
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-align: center;
 }
-/* line 186, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 ul.tabs li {
   background: none;
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
 }
-/* line 192, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 ul.tabs li.current {
   border-bottom: 3px solid black;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 281, ../scss/app.scss */
 .tab-content {
   display: none;
 }
-/* line 202, ../scss/app.scss */
+/* line 284, ../scss/app.scss */
 .tab-content.current {
   display: inherit;
 }
 
 /* =WordPress Core
 -------------------------------------------------------------- */
-/* line 210, ../scss/app.scss */
+/* line 292, ../scss/app.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 214, ../scss/app.scss */
+/* line 296, ../scss/app.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 220, ../scss/app.scss */
+/* line 302, ../scss/app.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 225, ../scss/app.scss */
+/* line 307, ../scss/app.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 230, ../scss/app.scss */
+/* line 312, ../scss/app.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 235, ../scss/app.scss */
+/* line 317, ../scss/app.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 239, ../scss/app.scss */
+/* line 321, ../scss/app.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 244, ../scss/app.scss */
+/* line 326, ../scss/app.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 250, ../scss/app.scss */
+/* line 332, ../scss/app.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -1897,22 +1968,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 258, ../scss/app.scss */
+/* line 340, ../scss/app.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 262, ../scss/app.scss */
+/* line 344, ../scss/app.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 266, ../scss/app.scss */
+/* line 348, ../scss/app.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 270, ../scss/app.scss */
+/* line 352, ../scss/app.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -1922,7 +1993,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 279, ../scss/app.scss */
+/* line 361, ../scss/app.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -1931,7 +2002,7 @@ a img.aligncenter {
 }
 
 /* Text meant only for screen readers. */
-/* line 287, ../scss/app.scss */
+/* line 369, ../scss/app.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -1940,7 +2011,7 @@ a img.aligncenter {
   overflow: hidden;
 }
 
-/* line 295, ../scss/app.scss */
+/* line 377, ../scss/app.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -1963,7 +2034,7 @@ a img.aligncenter {
 }
 
 /* ACCORDION */
-/* line 324, ../scss/app.scss */
+/* line 406, ../scss/app.scss */
 .accordion {
   overflow: hidden;
   /*box-shadow:0px 1px 3px rgba(0,0,0,0.25);*/
@@ -1972,7 +2043,7 @@ a img.aligncenter {
 }
 
 /*----- Section Titles -----*/
-/* line 332, ../scss/app.scss */
+/* line 414, ../scss/app.scss */
 .accordion-section-title {
   width: 100%;
   padding: 5px 0;
@@ -1982,7 +2053,7 @@ a img.aligncenter {
   text-decoration: none;
 }
 
-/* line 341, ../scss/app.scss */
+/* line 423, ../scss/app.scss */
 .accordion-section-title.active,
 .accordion-section-title:hover,
 .accordion-section-title:focus,
@@ -1990,13 +2061,13 @@ a img.aligncenter {
   text-decoration: none;
 }
 
-/* line 348, ../scss/app.scss */
+/* line 430, ../scss/app.scss */
 .accordion-section:last-child .accordion-section-title {
   border-bottom: 1px solid #8F8F8F;
 }
 
 /*----- Section Content -----*/
-/* line 353, ../scss/app.scss */
+/* line 435, ../scss/app.scss */
 .accordion-section-content {
   padding: 15px 0;
   display: none;

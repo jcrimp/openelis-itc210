@@ -1,13 +1,11 @@
 </div>
 <!-- End main div -->
-
+</div>
 <!-- Begin footer -->
-<footer>
+<footer class="row">
 <!-- Begin Footer Navigation -->
 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => 'nav','container_id' => 'nav-footer' ) ); ?> 
 <!-- End Footer Navigation --> 
-    
-<?php dynamic_sidebar(2); ?>
     
 <!-- Begin footer social nav -->
 <nav class="nav-social">
@@ -17,6 +15,10 @@
     </ul>
 </nav>
 <!-- End footer social nav -->
+    
+<?php dynamic_sidebar(2); ?>
+    
+
     
 </footer>
 <!-- End Footer -->
@@ -41,6 +43,16 @@
                 minItems: 2,
                 maxItems: 6
             });
+            
+            $('#nav-main li ul').hide().removeClass('sub-menu');
+            $('#nav-main li').hover(
+                function () {
+                    $('ul', this).stop().slideDown(100);
+                },
+                function () {
+                    $('ul', this).stop().slideUp(100);
+                }
+            );
         });
         
         function close_accordion_section() {
