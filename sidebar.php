@@ -27,12 +27,6 @@
                     <h2>SIDEBAR B</h2>
                     <h2><a href="<?php echo get_the_permalink(get_page_by_title('News')); ?>">News</a></h2>
                     <?php dynamic_sidebar(1); ?>
-                <?php else: ?>
-                    <style>
-                        #primary{
-                            display: none;
-                        }
-                    </style>
                 <?php endif; ?>
             </nav>
                 

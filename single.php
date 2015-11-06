@@ -1,9 +1,12 @@
 <?php get_header(); ?>
-    
-<?php get_sidebar_if_children(); ?>
+    <div class="row">
+        <?php custom_breadcrumbs(); ?>
+    </div>
+    <div class="row">    
+<?php get_sidebar(); ?>
     
     <!-- Start Content -->
-    <div id="content">
+    <div class="content large-9 columns">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
         <?php add_flexslider(); // create flexslider gallery if the post has attachment images?>
         <article>
