@@ -103,7 +103,7 @@ function custom_breadcrumbs() {
     // Do not display on the homepage
     if ( !is_front_page() ) {
        
-        // Build the breadcrums
+        // Build the breadcrumbs
         echo '<ul id="' . $breadcrums_id . '" class="' . $breadcrums_class . '">';
            
         // Home page
@@ -133,7 +133,11 @@ function custom_breadcrumbs() {
             $custom_tax_name = get_queried_object()->name;
             echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . $custom_tax_name . '</strong></li>';
               
-        } else if ( is_single() ) {
+        } 
+        else if ( is_home() ) {
+            echo '<li class="item-current"><strong class="bread-current bread-archive">News</strong></li>';
+        }
+        else if ( is_single() ) {
               
             // If post is a custom post type
             $post_type = get_post_type();
@@ -152,7 +156,7 @@ function custom_breadcrumbs() {
             // Get post category info
             $category = get_the_category();
              
-            if(!empty($category)) {
+            /*if(!empty($category)) {
               
                 // Get last category post is in
                 $last_category = end(array_values($category));
@@ -168,7 +172,7 @@ function custom_breadcrumbs() {
                     $cat_display .= '<li class="separator"> ' . $separator . ' </li>';
                 }
              
-            }
+            }*/
               
             // If it's a custom post type within a custom taxonomy
             $taxonomy_exists = taxonomy_exists($custom_taxonomy);
@@ -183,7 +187,7 @@ function custom_breadcrumbs() {
             }
               
             // Check if the post is in a category
-            if(!empty($last_category)) {
+            /*if(!empty($last_category)) {
                 echo $cat_display;
                 echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
                   
@@ -194,9 +198,11 @@ function custom_breadcrumbs() {
                 echo '<li class="separator"> ' . $separator . ' </li>';
                 echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
               
-            } else {
+            }*/ else {
                   
-                echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
+                echo '
+                <li><a href="' . get_the_permalink(get_page_by_title("News")) . '">News</a></li>' . '<li class="separator">' . $separator . '</li>
+                <li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
                   
             }
               
