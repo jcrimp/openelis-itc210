@@ -88,7 +88,7 @@ header{
     }
 } 
 
-.searchform{
+header .searchform{
     float: right;
 }
 
@@ -257,6 +257,33 @@ footer .widget{
     }
 }
 
+
+/* SPOTLIGHT */
+
+.header-image{
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    background-image: url('https://placekitten.com/g/1000/300');
+    
+    h1{
+        position: absolute;
+        display: block;
+        bottom: 0;
+        z-index: 100;
+        background-color: hsla(0,0%,100%,0.8);
+        width: 100%;
+        margin-bottom: 0;
+        padding: 12px;
+    }
+}
+
+/* BREADCRUMBS */
+
+div.breadcrumbs{
+    background-color: #E6E6E6;
+}
+
 /* TABS */
 
 ul.tabs{
@@ -400,6 +427,15 @@ img.attachment-medium {}
 img.attachment-large {}
 img.attachment-full {}
 
+article img.attachment-thumbnail {
+    float: left;
+	margin: 4px 20px 0 0;
+}
+
+article{
+    overflow: hidden;
+}
+
 
 /* ACCORDION */
 
@@ -500,9 +536,10 @@ img.attachment-full {}
 .metaslider button{
     padding: 10px 30px;
 	font-size: 1em;
-    border: 3px solid black;
+    border: 2px solid black;
     background: none;
 	color: #000000;
+    margin-top: 8px;
     
     &:hover{
         background-color: #FFFFFF;
@@ -522,19 +559,3 @@ img.attachment-full {}
     background-color: hsla(0,0%,100%,0.8);
     padding: 2em 2rem;
 }
-
-/*#slide1 button{
-	bottom: 22%;
-    right: 8.9%;
-}
-
-#slide2 button{
-	bottom: 18%;
-	left: 4.6%;
-}
-
-#slide3 button{
-	bottom: 44%;
-	left: 17.3%;
-}
-*/

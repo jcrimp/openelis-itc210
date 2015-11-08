@@ -14,8 +14,14 @@
             endif; ?>
         </h1>
     
-    </div> 
-    <div class="row">
+    </div>
+<!-- end header image row -->
+
+<!-- begin breadcrumbs row -->
+    <div class="row breadcrumbs">
         <?php custom_breadcrumbs(); ?>
     </div>
+<!-- end breadcrumbs row -->
+
+<!-- begin row that contains content -->
     <div class="row">

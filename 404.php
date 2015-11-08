@@ -1,11 +1,17 @@
 <?php get_header(); ?>
-    
-<?php get_sidebar_if_children(); ?>
+<!-- begin breadcrumbs row -->
+<div class="row breadcrumbs">
+    <?php custom_breadcrumbs(); ?>
+</div>
+<!-- end breadcrumbs row -->
+
+<!-- begin row that contains content -->
+<div class="row"> 
     
     <!-- Start Content -->
-    <div id="content">
-        <h1>Sorry, the page you are looking for does not exist</h1>
-        <p>Try searching for it</p>
+    <div class="content small-centered large-8 columns">
+        <h1>Sorry, we couldn't find that page</h1>
+        <p>Try a search:</p>
         <?php get_search_form(); ?>
         <small>404.php</small> 
     </div> 

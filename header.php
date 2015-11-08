@@ -37,7 +37,8 @@
         
         
     </header>
-        
+    
+    <!-- begin nav row -->
     <div class="row nav">
         <h1>
             <a href="<?=home_url()?>">
@@ -50,7 +51,7 @@
         <!-- End Main Navigation -->
         
     </div>
-    
+    <!-- end nav row -->
     
     
 <!-- Begin main div -->

@@ -1,6 +1,10 @@
 </div>
-<!-- End main div -->
+<!-- end row that contains content -->
+
 </div>
+<!-- End main div -->
+
+
 <!-- Begin footer -->
 <footer class="row">
 <!-- Begin Footer Navigation -->
