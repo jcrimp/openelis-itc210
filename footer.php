@@ -6,21 +6,30 @@
 
 
 <!-- Begin footer -->
-<footer class="row">
-<!-- Begin Footer Navigation -->
-<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => 'nav','container_id' => 'nav-footer' ) ); ?> 
-<!-- End Footer Navigation --> 
-    
-<!-- Begin footer social nav -->
-<nav class="nav-social">
-    <ul>
-        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-blue-80.png" alt="Facebook" /></a></li>
-        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-blue-80.png" alt="Twitter" /></a></li>
-    </ul>
-</nav>
-<!-- End footer social nav -->
-    
-<?php dynamic_sidebar(2); ?>
+<footer>
+    <div class="row nav collapse">
+        <div class="large-12 columns">
+            <!-- Begin Footer Navigation -->
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => 'nav','container_id' => 'nav-footer' ) ); ?> 
+            <!-- End Footer Navigation --> 
+            
+            <!-- Begin footer social nav -->
+            <nav class="nav-social">
+                <ul>
+                    <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-blue-80.png" alt="Facebook" /></a></li>
+                    <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-blue-80.png" alt="Twitter" /></a></li>
+                </ul>
+            </nav>
+            <!-- End footer social nav --> 
+        </div>
+    </div>
+<div class="row collapse">
+    <div class="large-6 columns">
+        <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a></p>
+        <p>&copy; <?php the_time('Y'); ?> OpenELIS Foundation</p>
+    </div>
+    <div class="large-6 columns"><?php dynamic_sidebar(2); ?></div>
+</div>
     
 
     
