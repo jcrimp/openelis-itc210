@@ -10,6 +10,8 @@
     
     <!-- Start Content -->
     <div class="content small-centered large-8 columns">
+        <h1>Search Results</h1>
+        <?php get_search_form(); ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
         <article>
             <h1><a href="<?php the_permalink; ?>"><?php the_title(); // get the page or posting title ?></a></h1>

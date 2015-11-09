@@ -8,7 +8,7 @@ get_template_part('spotlight');
 get_sidebar(); ?>
     
     <!-- Start Content -->
-    <div id="content" class="large-9 columns">
+    <div class="content large-9 columns">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop  ?>
         <?php the_content(''); // get page or posting written content ?>
         <?php endwhile; endif; // end the loop ?>

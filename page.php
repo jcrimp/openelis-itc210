@@ -3,7 +3,7 @@
 <?php get_sidebar(); ?>
 <?php the_post() ?>
     <!-- Start Content -->
-    <div id="content" class="large-9 columns">
+    <div class="content large-9 columns">
         
         <?php the_content(); // get page or posting written content ?>
         
