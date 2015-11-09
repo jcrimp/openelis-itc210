@@ -1942,7 +1942,7 @@ ul.tabs li.current {
 .content section {
   overflow: hidden;
   border-bottom: 1px solid #000;
-  padding: 40px 0 50px 0;
+  padding: 30px 0 50px 0;
 }
 /* line 324, ../scss/app.scss */
 .content section:last-of-type {

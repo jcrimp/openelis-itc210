@@ -5,15 +5,13 @@
             $imgURL = $featuredImage[0]; //get the url of the image out of the array       
         ?>
         <img src="<?=$imgURL?>" alt="Spotlight" class="spotlight"/>
-        <?php endif ?>
-        
-        <h1><? if(is_home()):
-             echo 'News';
-             else:
-             the_title(); // get the page or posting title 
-            endif; ?>
-        </h1>
+        <?php endif; 
     
+        if (is_home()): ?>
+            <h1>News</h1>
+        <?php else: ?>
+             <h1><?php echo get_the_title($post->title); // get the page or posting title ?></h1>
+        <?php endif; ?>
     </div>
 <!-- end header image row -->
 
