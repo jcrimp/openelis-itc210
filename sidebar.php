@@ -1,10 +1,15 @@
-    <!-- Begin Primary Aside -->
+    <?php 
+    
+    $children = get_pages('child_of='.$post->ID);
+    $ancestors = $post->ancestors;
+    if( count( $children ) != 0 || $ancestors || (get_the_title() == "FAQ") || (!(is_page())) ): ?>   
+<!-- Begin Primary Aside -->
         <aside id="primary" class="large-3 columns"> 
             <nav id="nav-sub">
                 <?php if(is_page()) : 
                 
                     //if it's the FAQ page
-                    if(is_page_template('page-faq.php')):
+                    if(get_the_title() == "FAQ"):
                     //show the FAQ sidebar ?>
                         <h2>SIDEBAR C</h2>
                         <h2><a href="<?php echo get_the_permalink(get_page_by_title('FAQ')); ?>">FAQ</a></h2>
@@ -32,3 +37,4 @@
                 
         </aside> 
         <!-- End Primary Aside -->
+<?php endif; ?>
