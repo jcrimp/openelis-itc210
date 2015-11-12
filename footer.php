@@ -57,7 +57,7 @@
                 maxItems: 6
             });
             
-            $('#nav-main li ul').hide().removeClass('sub-menu');
+           /* $('#nav-main li ul').hide().removeClass('sub-menu');
             $('#nav-main li').hover(
                 function () {
                     $('ul', this).stop().slideDown(100);
@@ -65,7 +65,21 @@
                 function () {
                     $('ul', this).stop().slideUp(100);
                 }
-            );
+            );*/
+            
+            /*$('.menu-item-has-children > a').append('<span>▿</span>')*/
+            
+            if($(window).width() <= 625){
+                $('.menu-item-has-children > a').click( function(e) {
+                e.preventDefault();
+                $(this).parent().toggleClass('tap');
+            });
+            }
+            
+            $('.menu-button').click( function(e) {
+                e.preventDefault();
+                $('#nav-main ul.menu').toggleClass('show');
+            });
         });
         
         function close_accordion_section() {

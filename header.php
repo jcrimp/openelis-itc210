@@ -24,7 +24,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="row">
+    <header class="row nav">
+        <div class="large-12 columns">
+            <a class="menu-button" href="javascript:;">&#9776;  MENU</a>
         <!-- Begin header social nav -->
         <?php get_search_form(); ?>
         <nav class="nav-social">
@@ -36,10 +38,10 @@
         <!-- End header social nav -->
         
         
-    </header>
     
-    <!-- begin nav row -->
-    <div class="row nav">
+    
+    
+        
         <h1>
             <a href="<?=home_url()?>">
                 <img src="http://placehold.it/200x100?text=logo" alt="OpenELIS Logo" class="logo" />
@@ -47,11 +49,12 @@
             </a>  
         </h1>
         <!-- Begin Main Navigation -->
-        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'nav','container_id' => 'nav-main' ) ); ?>    
+        <nav id="nav-main" class="main-menu-container">
+        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false) ); ?> 
+        </nav>
         <!-- End Main Navigation -->
-        
-    </div>
-    <!-- end nav row -->
+        </div>
+    </header>
     
     
 <!-- Begin main div -->
