@@ -10,7 +10,7 @@
         echo do_shortcode("$metaslider");
         endif; ?>
         
-        <div class="row">
+        <div class="row our-story">
             <div class="small-centered large-8 medium-10 columns">
                 <h1>Our Story</h1>
                 <?php 
@@ -37,88 +37,119 @@
                     <p><?=$tab_3_content?></p>
                 </div>
                 
-                <?php endif; ?>
-                
-                <!--<ul class="tabs">
-                    <li class="tab-link current" data-tab="tab-1">Mission</li>
-                    <li class="tab-link" data-tab="tab-2">Community</li>
-                    <li class="tab-link" data-tab="tab-3">Connect</li>
-                </ul>
-                
-                <div id="tab-1" class="tab-content current">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div id="tab-2" class="tab-content">
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div id="tab-3" class="tab-content">
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>-->
-                
+                <?php endif; ?> 
             </div>
         </div>
-        <?php endwhile; endif; // end the loop 
+                <?php endwhile; endif; // end the loop 
         wp_reset_query(); ?>
         
-        <?php 
-        $query1 = new WP_Query( array( 'pagename' => 'software' ) );
-        while($query1->have_posts()):
-            $query1->the_post(); 
-            $page_excerpt = get_field('page_excerpt'); ?>
+        
         
         <div class="row software">
             <div class="small-centered large-8 medium-10 columns">
                 <h2>Our Software</h2>
-                <?php if(!empty($page_excerpt)): ?>
-                <p><?=$page_excerpt?></p>
-                <?php endif; ?>
-        <?php endwhile;
-        wp_reset_postdata();
-        ?>
+                <?php 
+                $query1 = new WP_Query( array( 'pagename' => 'software' ) );
+                while($query1->have_posts()):
+                    $query1->the_post(); 
+                    $page_excerpt = get_field('page_excerpt');
+                        if(!empty($page_excerpt)): ?>
+                            <p><?=$page_excerpt?></p>
+                        <?php endif; ?>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+                
+                
                 <div class="row">
                     <div class="large-6 medium-6 columns center">
-                        <img src="http://placehold.it/100x100?text=logo" />
+                        <?php 
+                        $query2 = new WP_Query( array( 'pagename' => 'software/us-software' ) );
+                        
+                       while($query2->have_posts()):
+                        $query2->the_post(); 
+                            $icon = get_field('thumbnail_icon');
+                            $url = get_the_permalink($query2->post->permalink);
+                            $title = get_the_title($query2->post->title);
+                        
+                            if(!empty($icon)): ?>
+                            <img src="<?=$icon['url']?>" alt="<?=$icon['alt']?>" />
+                            <?php endif; ?>
                         <h4>US</h4>
-                        <p><a href="/locations">Map</a> | <a href="javascript:;">Demo</a></p>
+                        <p><a href="<?=$url?>"><?=$title?></a> | <a href="/locations">Locations</a></p>
                     </div>
+                    
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
+                    
+                    
                     <div class="large-6 medium-6 columns center">
-                        <img src="http://placehold.it/100x100?text=logo" />
+                        <?php 
+                        $query3 = new WP_Query( array( 'pagename' => 'software/global-software' ) );
+                        
+                       while($query3->have_posts()):
+                        $query3->the_post(); 
+                            $icon = get_field('thumbnail_icon');
+                            $url = get_the_permalink($query3->post->permalink);
+                            $title = get_the_title($query3->post->title);
+                        
+                            if(!empty($icon)): ?>
+                            <img src="<?=$icon['url']?>" alt="<?=$icon['alt']?>" />
+                            <?php endif; ?>
                         <h4>Global</h4>
-                        <p><a href="/locations">Map</a> | <a href="javascript:;">Demo</a></p>
+                        <p><a href="<?=$url?>"><?=$title?></a> | <a href="/locations">Locations</a></p>
                     </div>
+                    
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
                 </div>
             </div>
         </div>
         
-        <div class="row">
+        <div class="row get-involved">
             <div class="small-centered large-8 medium-10 columns">
-                <h2>Get Involved</h2>
+                <?php 
+                        $query4 = new WP_Query( array( 'pagename' => 'get-involved' ) );
+                        
+                       while($query4->have_posts()):
+                            $query4->the_post(); 
+                            $title = get_the_title($query4->post->title);
+                            $url = get_the_permalink($query4->post->permalink);
+                            $lab_icon = get_field('lab_experts_icon');
+                            $dev_icon = get_field('developers_icon');
+                            $implement_icon = get_field('implementers_icon');
+                            $lab_excerpt = get_field('lab_experts_excerpt');
+                            $dev_excerpt = get_field('developers_excerpt');
+                            $implement_excerpt = get_field('implementers_excerpt');
+                             ?>
+                            
+                
+                <h2><?=$title?></h2>
                 <div class="row">
                 <div class="large-4 medium-4 columns">
-                    <img src="http://placehold.it/300x150?text=lab experts" />
+                    <p class="center"><img src="<?=$lab_icon['url']?>" alt="<?=$lab_icon['alt']?>" /></p>
                     <h4>Lab Experts</h4>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="/get-involved">Learn More</a>
+                    <p><?=$lab_excerpt?></p>
                 </div>
                 
                 <div class="large-4 medium-4 columns">
-                    <img src="http://placehold.it/300x150?text=implementers" />
-                    <h4>Implementers</h4>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="/get-involved">Learn More</a>
-                </div>
-                
-                <div class="large-4 medium-4 columns">
-                    <img src="http://placehold.it/300x150?text=developers" />
+                    <p class="center"><img src="<?=$dev_icon['url']?>" alt="<?=$dev_icon['alt']?>" /></p>
                     <h4>Developers</h4>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="/get-involved">Learn More</a>
+                    <p><?=$dev_excerpt?></p>
                 </div>
-</div>
+                
+                <div class="large-4 medium-4 columns">
+                    <p class="center"><img src="<?=$implement_icon['url']?>" alt="<?=$dev_icon['alt']?>" /></p>
+                    <h4>Implementers</h4>
+                    <p><?=$implement_excerpt?></p>
+                </div>
+                </div>
+                <p class="center"><a href="<?=$permalink?>">Learn More</a></p>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
             </div>
         </div>
         
-        <div class="row" id="partners">
+        <div class="row partners">
             <div class="small-centered large-8 medium-10 columns">
                 <h2>Our Partners</h2>
                 <ul>
@@ -162,7 +193,7 @@
         </div>
 
         
-        
+
         <small>front-page.php</small> 
     </div> 
     <!-- End Content -->

@@ -65,30 +65,25 @@ div, header, aside, footer, nav{
 /* HEADER */
 
 header{
-    padding-top: 16px;
     
-    .nav-social{
-        float: right;
-    }
 }
-
-
- 
 
 header .searchform{
     float: right;
 }
 
 header{
+    padding-top: 16px;
     padding-bottom: 16px;
+    
+    .nav-social{
+        float: right;
+    }
     
     h1{
         margin: 30px 0 0 0;
         span{
             display: none;
-        }
-        img{
-            width: 200px;
         }
     }
     
@@ -128,10 +123,6 @@ nav ul{
         margin-bottom: 0;
     }
 }
-
-
-
-
 
 /* NAV-MAIN */
 
@@ -312,7 +303,13 @@ footer .widget{
     text-align: center;
 }
 
-#partners ul{
+.software{
+    img{
+        width: 180px;
+    }
+}
+
+.partners ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -322,6 +319,12 @@ footer .widget{
         width: 20%;
         text-align: center;
         margin-bottom: 16px;
+    }
+}
+
+.get-involved{
+    img{
+        max-height: 140px;
     }
 }
 
