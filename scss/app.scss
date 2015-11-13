@@ -61,6 +61,90 @@ div, header, aside, footer, nav{
 
 /* END DEVELOPMENT ONLY */
 
+fieldset{
+	/* padding: 12px; /* fallback for IE8 */
+	/* padding: .75em .75rem; */
+	padding: 0;
+	border: none;
+	margin-bottom: 1em;
+}
+
+legend{
+	background-color: #F2F2F2; /* lightest grey */
+	width: 100%;
+	padding: .66666667em;
+}
+
+form p{
+	margin-bottom: 1.25em;	
+}
+
+label{
+	display: block;
+	margin-bottom: .66666666667em;
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="password"]{
+	display: block;
+	width: 100%;
+	margin-bottom: 1.25em;
+	padding: .25em;
+	height: 2em;
+	font-size: 1em;
+	border: 1px solid #C2C2C2; /* grey */
+	background-color: #FFFFFF;
+}
+
+.wide-text input[type="text"]{
+	float: left;
+}
+
+input[type="checkbox"]{
+	margin: .25em .6666666667em .25em 0;
+	height: 1.28em;
+}
+
+textarea{
+	width: 100%;
+	padding: .25em;
+	font-size: 1em;
+	border: 1px solid #C2C2C2; /* grey */ 
+	background-color: #F5F5F5;
+}
+
+select{
+	font-size: 1em;
+}
+
+input[type="submit"], 
+button{
+	outline: none;
+	background-color: #8F8F8F;
+	color: #FFFFFF;
+	border: none;
+	padding: .666666667em .8em;
+	font-size: 1em;
+	letter-spacing: .02em;
+}
+
+input[type="submit"]:hover, 
+input[type="submit"]:focus, 
+button:hover{
+	background-color: #000;
+}
+
+
+input:focus,
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus,  
+textarea:focus{
+	background-color: #ffffff;
+	border: 1px solid #C2C2C2; /* grey */
+}
+
 
 /* HEADER */
 
@@ -70,6 +154,9 @@ header{
 
 header .searchform{
     float: right;
+    input[type="submit"]{
+        display: none;
+    }
 }
 
 header{
@@ -124,7 +211,11 @@ nav ul{
     }
 }
 
+
 /* NAV-MAIN */
+#nav-mobile{
+    display: none;
+}
 
 #nav-main{
     float: right;
@@ -324,7 +415,7 @@ footer .widget{
 
 .get-involved{
     img{
-        max-height: 140px;
+        max-height: 120px;
     }
 }
 
@@ -699,7 +790,75 @@ article{
         border-left: 1px solid black;
     }
     
-    #nav-main ul.menu{
+    #nav-main{
+        display: none;
+    }
+    
+    #nav-mobile{
+        display: none;
+        &.show{
+            display: block;
+        }
+        ul.menu{
+            -webkit-flex-flow: column wrap;
+            flex-flow: column wrap;
+            padding: 0;
+            height: auto;
+            clear: both;
+            
+            li{
+                width: 100%;
+                
+                &.menu-item-has-children > a:after{
+                    content: " +";
+                }
+                
+                ul{
+                    display: none;
+                }
+                
+                &.tap ul{
+                    display: block;
+                    background-color: #f1f1f1;
+                }
+                
+                &.tap > a:after{
+                    content: " -";
+                }
+            }
+            
+            //when on a top-level page, target only the top level nav link (not all of the links in the dropdown) - and make it bold 
+        & > li.current-menu-item > a{
+            font-weight: bold;
+        }
+        
+        //when on a sub-page, target the top-level link (its ancestor) - and make it bold
+        & > li.current-page-ancestor > a{
+            font-weight: bold;
+        }
+        
+        //when on a sub page, the make that link in the sub menu dropdown bold
+        & > li > ul > li.current-menu-item a{
+             font-weight: bold;
+        }
+            
+            a{
+                display: block;
+                line-height: 40px;
+                border-bottom: 1px solid black;
+                text-decoration: none;
+                color: #000;
+                padding: 0 10px;
+                &:hover{
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+    }
+    
+    
+    
+    /*#nav-main ul.menu{
         display: none;
         &.show{
             display: block;
@@ -753,11 +912,12 @@ article{
         & > li:last-of-type a {
             border-bottom: none;
         }     
-  }
+  }*/
     
     header h1{
         display: inline;
     }
+    
     header img.logo{
         width: 140px;
     }
@@ -766,10 +926,4 @@ article{
         display: none;
     }
 }
-
-@media all and (min-width: 626px){
-    #nav-main ul.menu li:hover ul{
-        display: block;
-    }
     
-}

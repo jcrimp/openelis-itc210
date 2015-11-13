@@ -7,7 +7,7 @@
 
 <!-- Begin footer -->
 <footer>
-    <div class="row nav collapse">
+    <div class="row nav">
         <div class="large-12 columns">
             <!-- Begin Footer Navigation -->
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => 'nav','container_id' => 'nav-footer' ) ); ?> 
@@ -23,12 +23,13 @@
             <!-- End footer social nav --> 
         </div>
     </div>
-<div class="row collapse">
-    <div class="large-6 columns">
+<div class="row">
+    <div class="large-6 medium-6 columns">
         <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a></p>
         <p>&copy; <?php the_time('Y'); ?> OpenELIS Foundation</p>
     </div>
-    <div class="large-6 columns"><?php dynamic_sidebar(2); ?></div>
+    <div class="large-6 medium-6 columns"><?php dynamic_sidebar(2); ?>   
+    </div>
 </div>
     
 
@@ -57,28 +58,27 @@
                 maxItems: 6
             });
             
-           /* $('#nav-main li ul').hide().removeClass('sub-menu');
+           $('#nav-main li ul').hide().removeClass('sub-menu');
             $('#nav-main li').hover(
                 function () {
-                    $('ul', this).stop().slideDown(100);
+                    $('ul', this).stop().slideDown(300);
                 },
                 function () {
-                    $('ul', this).stop().slideUp(100);
+                    $('ul', this).stop().slideUp(300);
                 }
-            );*/
+            );
             
             /*$('.menu-item-has-children > a').append('<span>▿</span>')*/
             
-            if($(window).width() <= 625){
-                $('.menu-item-has-children > a').click( function(e) {
+            $('#nav-mobile .menu-item-has-children > a').click( function(e) {
                 e.preventDefault();
                 $(this).parent().toggleClass('tap');
             });
-            }
+
             
             $('.menu-button').click( function(e) {
                 e.preventDefault();
-                $('#nav-main ul.menu').toggleClass('show');
+                $('#nav-mobile').toggleClass('show');
             });
         });
         

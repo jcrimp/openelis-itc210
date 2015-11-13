@@ -53,6 +53,11 @@
         <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false) ); ?> 
         </nav>
         <!-- End Main Navigation -->
+            
+        <!-- Begin Mobile Navigation -->
+        <nav id="nav-mobile">
+            <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'container' => false) ); ?>
+        </nav>
         </div>
     </header>
     

@@ -2,6 +2,7 @@
 
 register_nav_menus( array(
     'main-menu' => __('Main'), 
+    'mobile-menu' => __('Mobile'),
     'footer-menu' => __('Footer')
 ));
 
