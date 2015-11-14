@@ -24,12 +24,13 @@
         </div>
     </div>
 <div class="row">
-    <div class="large-6 medium-6 columns">
+    <div class="newsletter-container"><?php dynamic_sidebar(2); ?>   
+    </div>
+    <div class="copyright-container">
         <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a></p>
         <p>&copy; <?php the_time('Y'); ?> OpenELIS Foundation</p>
     </div>
-    <div class="large-6 medium-6 columns"><?php dynamic_sidebar(2); ?>   
-    </div>
+    
 </div>
     
 

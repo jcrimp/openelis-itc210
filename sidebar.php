@@ -4,7 +4,7 @@
     $ancestors = $post->ancestors;
     if( count( $children ) != 0 || $ancestors || (get_the_title() == "FAQ") || (!(is_page())) ): ?>   
 <!-- Begin Primary Aside -->
-        <aside id="primary" class="large-3 columns"> 
+        <aside id="primary" class="large-4 medium-4 columns"> 
             <nav id="nav-sub">
                 <?php if(is_page()) : 
                 

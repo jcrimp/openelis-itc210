@@ -3,7 +3,7 @@
 <?php get_sidebar(); ?>
     
     <!-- Start Content -->
-    <div class="content large-9 columns">
+    <div class="content large-8 medium-8 columns">
         <?php query_posts('posts_per_page=1');
         if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
         <h1><a href="<?php the_permalink();?>"><?php the_title(); // get the page or posting title ?></a></h1>
