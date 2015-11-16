@@ -24,6 +24,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div class=" header wrapper">
     <header class="row nav">
         <div class="large-12 columns">
             <a class="menu-button" href="javascript:;">&#9776;  MENU</a>
@@ -60,7 +61,7 @@
         </nav>
         </div>
     </header>
-    
+    </div>
     
 <!-- Begin main div -->
 <div id="main"> 

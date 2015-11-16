@@ -6,7 +6,7 @@
 
 
 <!-- Begin footer -->
-<footer>
+<footer class="wrapper">
     <div class="row nav">
         <div class="large-12 columns">
             <!-- Begin Footer Navigation -->
