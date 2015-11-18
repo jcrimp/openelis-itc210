@@ -3,7 +3,7 @@ get_template_part('spotlight');
 get_sidebar(); ?>
     
     <!-- Start Content -->
-    <div class="content large-9 columns">
+    <div class="content large-8 medium-8 columns">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
         <?//php add_flexslider(); // create flexslider gallery if the post has attachment images?>
         <article>

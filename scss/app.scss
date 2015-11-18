@@ -39,6 +39,21 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+@import "wordpress-classes";
+
+/* VARIABLES */
+
+/* MEDIA QUERIES */
+$all-lg: "all and (max-width: 825px)";
+$all-md: "all and (max-width: 640px)"; 
+$all-mdsm: "all and (max-width: 640px)";
+$all-sm: "all and (max-width: 625px)";
+
+/* COLORS */
+$royal-purple: #32276d;
+$dark-grey: #393b42;
+$lightest-grey: #f0eff2; 
+
 body{
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -65,6 +80,8 @@ div, header, aside, footer, nav{
     clear: both;
 }
 
+
+/* FORMS */
 fieldset{
 	/* padding: 12px; /* fallback for IE8 */
 	/* padding: .75em .75rem; */
@@ -89,6 +106,7 @@ label{
 }
 
 input[type="text"],
+input[type="search"],
 input[type="email"], 
 input[type="password"]{
 	display: block;
@@ -99,10 +117,6 @@ input[type="password"]{
 	font-size: 1em;
 	border: 1px solid #C2C2C2; /* grey */
 	background-color: #FFFFFF;
-}
-
-.wide-text input[type="text"]{
-	float: left;
 }
 
 input[type="checkbox"]{
@@ -142,6 +156,7 @@ button:hover{
 
 input:focus,
 input[type="text"]:focus, 
+input[type="search"], 
 input[type="email"]:focus, 
 input[type="password"]:focus,  
 textarea:focus{
@@ -159,32 +174,68 @@ textarea:focus{
 /* HEADER */
 
 .header{
-    background-color: azure;
-}
-header{
+    background-color: $dark-grey;
     
-}
-
-header .searchform{
-    float: right;
-    input[type="submit"]{
-        display: none;
+    .search-form{
+        float: right;
+        
+        .search-submit{
+            display: none;
+        }
     }
-    input[type="text"]{
-        margin-bottom: 0;
+    
+    .search-field{
+        background-color: transparent;
+        background-image: url('../images/search-icon-white.png');
+        background-position: 5px center;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        border: none;
+        cursor: pointer;
+        height: 37px;
+        margin: 0;
+        padding: 0 0 0 34px;
+        position: relative;
+        
+            cursor: text;
+            outline: 0;
+            width: 230px;
+            border-bottom: 3px solid white;
+        
+        
+        @media #{$all-sm} {
+            -webkit-transition: width 400ms ease, background 400ms ease;
+            transition: width 400ms ease, background 400ms ease;
+            width: 0;
+            border-bottom: 3px solid $dark-grey;
+            margin-right: 16px;
+                &:focus{
+                //background-color: $lightest-grey;
+                //border: 2px solid #c3c0ab;
+                cursor: text;
+                outline: 0;
+                width: 230px;
+                border-bottom: 3px solid white;
+            }
+        }
     }
 }
 
 header{
     padding-top: 16px;
     padding-bottom: 16px;
-    
     .nav-social{
         float: right;
     }
     
     h1{
         margin: 30px 0 0 0;
+        
+        @media #{$all-lg} {
+            margin: 0 0 16px 0;
+            overflow: hidden;
+        }
+        
         span{
             display: none;
         }
@@ -235,8 +286,13 @@ nav ul{
 
 #nav-main{
     float: right;
+    clear: right;
     margin-top: 50px;
     
+    @media #{$all-lg} {
+        float: none;
+        margin-top: 0;
+    }
     ul{
         margin: 0;
         padding: 0;
@@ -252,13 +308,18 @@ nav ul{
         -webkit-flex-flow: row wrap;
         justify-content: flex-end;
         
+        @media #{$all-lg} {
+            width: 100%;
+            justify-content: space-around;
+        }
+        
         //target top level nav links only
         & > li > a{
-            border-bottom: 3px solid #fff;
+            border-bottom: 3px solid $dark-grey;
             
             //on hover, show border bottom on top level nav links
             &:hover{
-                border-bottom: 3px solid black;
+                border-bottom: 3px solid $lightest-grey;
             }
         }
         
@@ -280,16 +341,8 @@ nav ul{
     
     li{
         position: relative;
-        //float: left;
-        //margin-bottom: 0;
-        //display: inline;
-        
-       /* &:last-of-type{
-            margin-right: 0;
-        }*/
         
         &:hover{
-            //border-bottom: 3px solid black;
             
             //when hovering over any menu li, give the sub-menu display: block
             & ul.sub-menu{
@@ -307,7 +360,8 @@ nav ul{
             width: 160px;
             left: 0;
             top: 100%;
-            background: hsla(0,0%,100%,0.8);
+            background: rgba( $dark-grey, .7 );
+            //opacity: .5;
             z-index: 900;
             
             li{
@@ -318,7 +372,7 @@ nav ul{
                 }
                 
                 &:hover a{
-                    background-color: #fff
+                    background-color: rgba( $dark-grey, 1);
                 }
             }
             
@@ -331,17 +385,13 @@ nav ul{
     a{
         display: block;
         padding: 8px 12px;
-        color: #000;
+        color: $lightest-grey;
         &:link, 
         &:visited{
             text-decoration: none;
         }
     }
 }
-
-
-
-
 
 /* FOOTER-MENU */
 
@@ -352,7 +402,15 @@ footer{
 footer ul.menu > li.menu-item-has-children{
     float: left;
     width: 25%;
-    padding: 0 15px;
+    //padding: 0 15px;
+    
+    @media #{$all-lg} {
+        width: 50%;
+        padding-bottom: 30px;
+        &:nth-of-type(3){
+            clear: both;
+        }
+    }
 }
 
 footer ul.menu > li > a{
@@ -377,8 +435,19 @@ footer .widget{
 
 footer .newsletter-container{
     width: 50%;
-    padding: 0 15px;
+    //padding: 0 15px;
     float: right;
+}
+
+input[type="email"].newsletter-email{
+    width: 70%;
+    float: left;
+    border: none;
+}
+
+input[type="submit"].newsletter-submit{
+    height: 2em;
+    padding: 0 12px;
 }
 
 footer .copyright-container{
@@ -467,19 +536,10 @@ footer .copyright-container{
 .spotlight{
     overflow: hidden;
     position: relative;
-    //height: 200px;
-    //background-image: url('https://placekitten.com/g/1000/400');
-    //background-size: cover;
     
     h1{
         position: absolute;
-        //display: block;
-        //z-index: 100;
-        //background-color: hsla(0,0%,100%,0.8);
-        //width: 100%;
         bottom: 0;
-        //margin-bottom: 0;
-        //padding: 12px;
         color: white;
     }
     img{
@@ -560,118 +620,6 @@ ul.tabs{
 
 
 
-/* =WordPress Core
--------------------------------------------------------------- */
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter,
-div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-.alignright {
-    float:right;
-    margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-}
-
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
-}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-}
-
-img.wp-post-image {}
-img.attachment-thumbnail {}
-img.attachment-medium {}
-img.attachment-large {}
-img.attachment-full {}
 
 article img.attachment-thumbnail {
     float: left;
@@ -767,9 +715,6 @@ article{
     }
 }
 
-/*.flexslider { width: 90%; margin: 0 auto; }*/
-
-
 .metaslider .flex-control-nav{
     bottom: 4%;
     z-index: 900;
@@ -808,34 +753,6 @@ article{
 
 /* MEDIA QUERIES */
 
-@media all and (max-width: 825px) {
-    header{
-        h1{
-            margin: 0 0 16px 0;
-            overflow: hidden;
-        }
-    }
-    #nav-main{
-        float: none;
-        margin-top: 0;
-        ul.menu {
-            width: 100%;
-            justify-content: space-around;
-        }
-    }  
-    
-
-    footer ul.menu > li.menu-item-has-children{
-        width: 50%;
-        //clear: both;
-        padding-bottom: 30px;
-        &:nth-of-type(3){
-            clear: both;
-        }
-    }
-    
-    
-}
 
 @media all and (max-width: 640px) {
     aside#primary{
@@ -920,64 +837,6 @@ article{
             }
         }
     }
-    
-    
-    
-    /*#nav-main ul.menu{
-        display: none;
-        &.show{
-            display: block;
-        }
-        -webkit-flex-flow: column wrap;
-        flex-flow: column wrap;
-        padding: 0;
-        height: auto;
-        clear: both;
-        
-        li{
-            width: 100%;
-            &:hover ul{
-                display: none;
-            }
-            &.tap ul{
-                display: block;
-                background-color: #f1f1f1;
-            }
-            
-            &.tap > a:after{
-                content: " ▵" !important;
-            }
-        }
-        a { 
-            //text-align: center; 
-            line-height: 40px;
-            border-bottom: 1px solid black;
-            //padding: 10px;
-            //border-top: 1px solid rgba(255,255,255,0.3); 
-            //border-bottom: 1px solid rgba(0,0,0,0.1); 
-            
-            &:hover{
-                background-color: #e6e6e6;
-            }
-        }
-        ul{
-            position: relative;
-            width: 100%;
-        }
-        //target top level nav links only
-        & > li > a{
-            border-bottom: 1px solid black;
-            
-            //on hover, show border bottom on top level nav links
-            &:hover{
-                border-bottom: 1px solid black;
-                background-color: #e6e6e6;
-            }
-        }
-        & > li:last-of-type a {
-            border-bottom: none;
-        }     
-  }*/
     
     header h1{
         display: inline;

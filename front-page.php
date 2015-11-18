@@ -152,42 +152,49 @@
         <div class="row partners">
             <div class="small-centered large-8 medium-10 columns">
                 <h2>Our Partners</h2>
-                <ul>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <img src="http://placehold.it/100x100?text=logo" />
-                        </a>
-                    </li>
+                    <ul>
+                    <?php 
+                        $query5 = new WP_Query( array( 'pagename' => 'about/partners' ) );
+                        
+                        while($query5->have_posts()):
+                            $query5->the_post(); 
+                            $logo1 = get_field('logo_1');
+                            if(!empty($logo1)): ?>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="<?=$logo1['sizes']['medium']?>" alt="<?=$logo1['alt']?>" />
+                                    </a>
+                                </li>
+                            <?php endif;
+                            
+                            $logo2 = get_field('logo_2');
+                            if(!empty($logo2)): ?>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="<?=$logo2['sizes']['medium']?>" alt="<?=$logo2['alt']?>" />
+                                    </a>
+                                </li>
+                            <?php endif;
+                            
+                            $logo3 = get_field('logo_3');
+                            if(!empty($logo3)): ?>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="<?=$logo3['sizes']['medium']?>" alt="<?=$logo3['alt']?>" />
+                                    </a>
+                                </li>
+                            <?php endif;
+                            
+                            $logo4 = get_field('logo_4');
+                            if(!empty($logo4)): ?>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="<?=$logo4['sizes']['medium']?>" alt="<?=$logo4['alt']?>" />
+                                    </a>
+                                </li>
+                            <?php endif;
+                        endwhile;
+                wp_reset_postdata(); ?>
                 </ul> 
             </div>
         </div>

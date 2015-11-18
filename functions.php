@@ -21,6 +21,7 @@ register_sidebar(array(
 ));
 
 add_theme_support('post-thumbnails');
+add_theme_support('html5', array('search-form'));
 
 function get_top_parent_page_id() {
     global $post;
