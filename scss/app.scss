@@ -49,6 +49,7 @@ $all-md: "all and (max-width: 640px)";
 $all-mdsm: "all and (max-width: 640px)";
 $all-sm: "all and (max-width: 625px)";
 
+
 /* COLORS */
 $royal-purple: #32276d;
 $dark-grey: #393b42;
@@ -169,6 +170,7 @@ textarea:focus{
 .wrapper{
     width: 100%;
     max-width: 1366px;
+    margin: 0 auto;
 }
 
 /* HEADER */
@@ -396,7 +398,7 @@ nav ul{
 /* FOOTER-MENU */
 
 footer{
-    background-color: floralwhite;
+    background-color: $lightest-grey;
 }
 
 footer ul.menu > li.menu-item-has-children{
@@ -722,24 +724,7 @@ article{
 
 .metaslider .slides li{
 	position: relative;
-}
-
-.metaslider button{
-    padding: 10px 30px;
-	font-size: 1em;
-    border: 2px solid black;
-    background: none;
-	color: #000000;
-    margin-top: 8px;
     
-    &:hover{
-        background-color: #FFFFFF;
-    }
-    
-    a{
-        text-decoration: none;
-        color: #000;
-    }
 }
 
 .metaslider .caption-wrap{
@@ -747,8 +732,44 @@ article{
     bottom: 5%;
     left: 5%;
     font-size: 24px;
-    background-color: hsla(0,0%,100%,0.8);
     padding: 2em 2rem;
+    font-weight: bold;
+    color: white;
+    
+    p{
+        margin-bottom: 0;
+    }
+    
+    a{
+        padding: 10px 30px;
+        font-size: 1em;
+        border: 2px solid white;
+        background: none;
+        color: white;
+        margin-top: 8px;
+        text-decoration: none;
+        
+        &:hover{
+            background-color: rgba( #fff, 0.3);
+        }
+    }
+    
+    @media #{$all-lg} {
+        position: relative;
+        color: black;
+        font-size: 16px;
+        padding: 1em 1rem;
+        
+        a{
+            color: black;
+            border: 2px solid black;
+            
+            &:hover{
+                color: white;
+                background-color: black;
+            }
+        }
+    }
 }
 
 /* MEDIA QUERIES */
