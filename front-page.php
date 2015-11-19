@@ -149,17 +149,18 @@
             </div>
         </div>
         
-        <div class="row partners">
+        <div class="row community">
             <div class="small-centered large-8 medium-10 columns">
-                <h2>Our Partners</h2>
-                    <ul>
+                
                     <?php 
-                        $query5 = new WP_Query( array( 'pagename' => 'about/partners' ) );
+                        $query5 = new WP_Query( array( 'pagename' => 'about/our-community' ) );
                         
                         while($query5->have_posts()):
                             $query5->the_post(); 
-                        
-                            $counter = 1;
+                            $title = get_the_title($query5->post->title); ?>
+                        <h2><?=$title?></h2>
+                        <ul>
+                            <?php $counter = 1;
                             while($field = get_field("logo_$counter")) { ?>
                                 <li>
                                     <img src="<?=$field['sizes']['medium']?>" alt="<?=$field['alt']?>" />

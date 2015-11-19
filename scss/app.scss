@@ -228,6 +228,10 @@ header{
     padding-bottom: 16px;
     .nav-social{
         float: right;
+        
+        @media #{$all-sm} {
+            display: none;
+        }
     }
     
     h1{
@@ -237,6 +241,10 @@ header{
             margin: 0 0 16px 0;
             overflow: hidden;
         }
+    
+    @media #{$all-sm} {
+        display: inline;
+    }
         
         span{
             display: none;
@@ -245,13 +253,28 @@ header{
     
     a.menu-button{
         display: none;
+        
+        @media #{$all-sm} {
+            display: block;
+            float: right;
+            text-decoration: none;
+            color: #000;
+            padding-left: 16px;
+            border-left: 1px solid black;
+        }
+    }
+
+    .logo{
+        width: 200px;
+        float: left;
+        
+        @media #{$all-sm} {
+            width: 140px;
+        }
     }
 }
 
-.logo{
-    width: 200px;
-    float: left;
-}
+
 
 
 /* NAVIGATION */
@@ -264,7 +287,7 @@ nav ul{
 
 /* NAV-SOCIAL */
 .nav-social{
-    
+
     ul{
         margin-left: 0;
         margin-top: 0;
@@ -282,9 +305,6 @@ nav ul{
 
 
 /* NAV-MAIN */
-#nav-mobile{
-    display: none;
-}
 
 #nav-main{
     float: right;
@@ -295,6 +315,11 @@ nav ul{
         float: none;
         margin-top: 0;
     }
+
+    @media #{$all-sm} {
+        display: none;
+    }
+
     ul{
         margin: 0;
         padding: 0;
@@ -395,10 +420,96 @@ nav ul{
     }
 }
 
+
+/* NAV-MOBILE */
+
+#nav-mobile{
+    display: none;
+    @media #{$all-sm} {
+        display: none;
+        &.show{
+            display: block;
+        }
+        ul.menu{
+            -webkit-flex-flow: column wrap;
+            flex-flow: column wrap;
+            padding: 0;
+            height: auto;
+            clear: both;
+            
+            li{
+                width: 100%;
+                
+                &.menu-item-has-children > a:after{
+                    content: " +";
+                }
+                
+                ul{
+                    display: none;
+                }
+                
+                &.tap ul{
+                    display: block;
+                    background-color: #f1f1f1;
+                }
+                
+                &.tap > a:after{
+                    content: " -";
+                }
+            }
+            
+        //when on a top-level page, target only the top level nav link (not all of the links in the dropdown) - and make it bold 
+        & > li.current-menu-item > a{
+            font-weight: bold;
+        }
+        
+        //when on a sub-page, target the top-level link (its ancestor) - and make it bold
+        & > li.current-page-ancestor > a{
+            font-weight: bold;
+        }
+        
+        //when on a sub page, the make that link in the sub menu dropdown bold
+        & > li > ul > li.current-menu-item a{
+             font-weight: bold;
+        }
+            
+            a{
+                display: block;
+                line-height: 40px;
+                border-bottom: 1px solid black;
+                text-decoration: none;
+                color: #000;
+                padding: 0 10px;
+                &:hover{
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+    }
+}
+
 /* FOOTER-MENU */
 
 footer{
     background-color: $lightest-grey;
+    
+    .nav-social{
+        @media #{$all-sm} {
+            float: none;
+            margin: 0 auto;
+            width: 86px;
+            
+            li:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+#nav-footer{
+    @media #{$all-sm}{
+        display: none;
+    }
 }
 
 footer ul.menu > li.menu-item-has-children{
@@ -421,6 +532,10 @@ footer ul.menu > li > a{
 
 footer .nav{
     margin-bottom: 30px;
+    
+    @media #{$all-sm} {
+        margin-bottom: 0;
+    }
 }
 
 footer .widget{
@@ -439,6 +554,10 @@ footer .newsletter-container{
     width: 50%;
     //padding: 0 15px;
     float: right;
+    
+    @media #{$all-sm} {
+       width: 100%; 
+    }
 }
 
 input[type="email"].newsletter-email{
@@ -456,6 +575,10 @@ footer .copyright-container{
     width: 50%;
     padding: 0 15px;
     
+    @media #{$all-sm} {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 
@@ -481,8 +604,10 @@ footer .copyright-container{
 
 /* SIDEBAR */
 
-.primary{
-    
+aside.primary{
+    @media #{$all-md} {
+        display: none
+    }
 }
 
 
@@ -505,7 +630,7 @@ footer .copyright-container{
 }
 
 
-.partners ul{
+.community ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -669,6 +794,7 @@ article{
     display:none;
 }
 
+
 /* FLEXSLIDER */
 .metaslider .flexslider{
 	border: none;
@@ -681,6 +807,10 @@ article{
     text-shadow: none;
     color: hsla(0,0%,0%,0);
     opacity: 1 !important;
+    
+    @media #{$all-lg} {
+        top: 35%;
+    }
     
     &:hover{
         background-color: hsla(0,0%,0%,0.3);
@@ -720,11 +850,33 @@ article{
 .metaslider .flex-control-nav{
     bottom: 4%;
     z-index: 900;
+    
+    @media #{$all-lg} {
+        display: none;
+    }
+}
+
+.metaslider .flex-control-paging{
+    li a{
+        background: transparent;
+        border: 2px solid white;
+        
+        &.flex-active{
+            background: white;
+        }
+        
+        &:hover{
+            background-color: white;
+        }
+    }
 }
 
 .metaslider .slides li{
 	position: relative;
     
+    @media #{$all-lg} {
+        background-color: $lightest-grey;
+    }
 }
 
 .metaslider .caption-wrap{
@@ -772,131 +924,4 @@ article{
     }
 }
 
-/* MEDIA QUERIES */
-
-
-@media all and (max-width: 640px) {
-    aside#primary{
-        display: none;
-    }
-}
-
-
-@media all and (max-width: 625px) {
-
-    header a.menu-button{
-        display: block;
-        float: right;
-        text-decoration: none;
-        color: #000;
-        padding-left: 16px;
-        border-left: 1px solid black;
-    }
-    
-    #nav-main{
-        display: none;
-    }
-    
-    #nav-mobile{
-        display: none;
-        &.show{
-            display: block;
-        }
-        ul.menu{
-            -webkit-flex-flow: column wrap;
-            flex-flow: column wrap;
-            padding: 0;
-            height: auto;
-            clear: both;
-            
-            li{
-                width: 100%;
-                
-                &.menu-item-has-children > a:after{
-                    content: " +";
-                }
-                
-                ul{
-                    display: none;
-                }
-                
-                &.tap ul{
-                    display: block;
-                    background-color: #f1f1f1;
-                }
-                
-                &.tap > a:after{
-                    content: " -";
-                }
-            }
-            
-            //when on a top-level page, target only the top level nav link (not all of the links in the dropdown) - and make it bold 
-        & > li.current-menu-item > a{
-            font-weight: bold;
-        }
-        
-        //when on a sub-page, target the top-level link (its ancestor) - and make it bold
-        & > li.current-page-ancestor > a{
-            font-weight: bold;
-        }
-        
-        //when on a sub page, the make that link in the sub menu dropdown bold
-        & > li > ul > li.current-menu-item a{
-             font-weight: bold;
-        }
-            
-            a{
-                display: block;
-                line-height: 40px;
-                border-bottom: 1px solid black;
-                text-decoration: none;
-                color: #000;
-                padding: 0 10px;
-                &:hover{
-                    background-color: #e6e6e6;
-                }
-            }
-        }
-    }
-    
-    header h1{
-        display: inline;
-    }
-    
-    header img.logo{
-        width: 140px;
-    }
-    
-    header .nav-social{
-        display: none;
-    }
-    
-    #nav-footer{
-        display: none;
-    }
-    
-    footer .nav{
-        margin-bottom: 0;
-    }
-    
-    footer .nav-social{
-        float: none;
-        margin: 0 auto;
-        width: 86px;
-        
-        li:last-of-type{
-            margin-right: 0;
-        }
-    }
-    
-    footer .newsletter-container{
-        width: 100%;
-    }
-    
-    footer .copyright-container{
-        width: 100%;
-        text-align: center;
-    }
-
-}
     
