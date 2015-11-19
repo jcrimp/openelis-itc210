@@ -51,9 +51,13 @@ $all-sm: "all and (max-width: 625px)";
 
 
 /* COLORS */
-$royal-purple: #32276d;
-$dark-grey: #393b42;
-$lightest-grey: #f0eff2; 
+$main-color: #243F50;
+$secondary-color: #3A576F;
+$accent-color: #5B8F47;
+$bg-divider-color: #80817E;
+$bg-color: #80817E;
+$text-color: #58585B;
+
 
 body{
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -92,7 +96,7 @@ fieldset{
 }
 
 legend{
-	background-color: #F2F2F2; /* lightest grey */
+	background-color: $bg-divider-color; 
 	width: 100%;
 	padding: .66666667em;
 }
@@ -176,7 +180,7 @@ textarea:focus{
 /* HEADER */
 
 .header{
-    background-color: $dark-grey;
+    background-color: $main-color;
     
     .search-form{
         float: right;
@@ -209,7 +213,7 @@ textarea:focus{
             -webkit-transition: width 400ms ease, background 400ms ease;
             transition: width 400ms ease, background 400ms ease;
             width: 0;
-            border-bottom: 3px solid $dark-grey;
+            border-bottom: 3px solid $main-color;
             margin-right: 16px;
                 &:focus{
                 //background-color: $lightest-grey;
@@ -342,11 +346,11 @@ nav ul{
         
         //target top level nav links only
         & > li > a{
-            border-bottom: 3px solid $dark-grey;
+            border-bottom: 3px solid $main-color;
             
             //on hover, show border bottom on top level nav links
             &:hover{
-                border-bottom: 3px solid $lightest-grey;
+                border-bottom: 3px solid $accent-color;
             }
         }
         
@@ -387,7 +391,7 @@ nav ul{
             width: 160px;
             left: 0;
             top: 100%;
-            background: rgba( $dark-grey, .7 );
+            background: rgba( $main-color, .7 );
             //opacity: .5;
             z-index: 900;
             
@@ -399,7 +403,7 @@ nav ul{
                 }
                 
                 &:hover a{
-                    background-color: rgba( $dark-grey, 1);
+                    background-color: rgba( $main-color, 1);
                 }
             }
             
@@ -412,7 +416,7 @@ nav ul{
     a{
         display: block;
         padding: 8px 12px;
-        color: $lightest-grey;
+        color: white;
         &:link, 
         &:visited{
             text-decoration: none;
@@ -491,7 +495,7 @@ nav ul{
 /* FOOTER-MENU */
 
 footer{
-    background-color: $lightest-grey;
+    background-color: $main-color;
     
     .nav-social{
         @media #{$all-sm} {
@@ -875,7 +879,7 @@ article{
 	position: relative;
     
     @media #{$all-lg} {
-        background-color: $lightest-grey;
+        //background-color: $lightest-grey;
     }
 }
 
