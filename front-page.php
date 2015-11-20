@@ -9,9 +9,9 @@
         if(!empty($metaslider)): 
         echo do_shortcode("$metaslider");
         endif; ?>
-        
-        <div class="row our-story">
-            <div class="small-centered large-8 medium-10 columns">
+        <div class="wrapper division">
+            <div class="row our-story center">
+                <div class="small-centered large-8 medium-10 columns">
                 <h1>Our Story</h1>
                 <?php 
                 $tab_1_title = get_field('tab_1_title');
@@ -22,9 +22,9 @@
                 $tab_3_content = get_field('tab_3_content');
                 if(!empty($tab_1_title)): ?>
                 <ul class="tabs">
-                    <li class="tab-link current" data-tab="tab-1"><?=$tab_1_title?></li>
-                    <li class="tab-link" data-tab="tab-2"><?=$tab_2_title?></li>
-                    <li class="tab-link" data-tab="tab-3"><?=$tab_3_title?></li>
+                    <li class="tab-link current" data-tab="tab-1"><h2><?=$tab_1_title?></h2></li>
+                    <li class="tab-link" data-tab="tab-2"><h2><?=$tab_2_title?></h2></li>
+                    <li class="tab-link" data-tab="tab-3"><h2><?=$tab_3_title?></h2></li>
                 </ul>
                 
                 <div id="tab-1" class="tab-content current">
@@ -38,16 +38,18 @@
                 </div>
                 
                 <?php endif; ?> 
+            
+                </div>
             </div>
+                    <?php endwhile; endif; // end the loop 
+            wp_reset_query(); ?>
+        
         </div>
-                <?php endwhile; endif; // end the loop 
-        wp_reset_query(); ?>
         
-        
-        
-        <div class="row software">
-            <div class="small-centered large-8 medium-10 columns">
-                <h2>Our Software</h2>
+        <div class="wrapper division accent">
+            <div class="row software center">
+                <div class="small-centered large-8 medium-10 columns">
+                <h1>Our Software</h1>
                 <?php 
                 $query1 = new WP_Query( array( 'pagename' => 'software' ) );
                 while($query1->have_posts()):
@@ -60,7 +62,7 @@
                 wp_reset_postdata(); ?>
                 
                 
-                <div class="row">
+                <div class="row center">
                     <div class="large-6 medium-6 columns center">
                         <?php 
                         $query2 = new WP_Query( array( 'pagename' => 'software/us-software' ) );
@@ -104,8 +106,10 @@
                 </div>
             </div>
         </div>
+        </div>
         
-        <div class="row get-involved">
+        <div class="wrapper division">
+            <div class="row get-involved center">
             <div class="small-centered large-8 medium-10 columns">
                 <?php 
                         $query4 = new WP_Query( array( 'pagename' => 'get-involved' ) );
@@ -123,8 +127,8 @@
                              ?>
                             
                 
-                <h2><?=$title?></h2>
-                <div class="row">
+                <h1><?=$title?></h1>
+                <div class="row center">
                 <div class="large-4 medium-4 columns">
                     <p class="center"><img src="<?=$lab_icon['url']?>" alt="<?=$lab_icon['alt']?>" /></p>
                     <h4>Lab Experts</h4>
@@ -149,7 +153,7 @@
             </div>
         </div>
         
-        <div class="row community">
+            <div class="row community center">
             <div class="small-centered large-8 medium-10 columns">
                 
                     <?php 
@@ -158,7 +162,7 @@
                         while($query5->have_posts()):
                             $query5->the_post(); 
                             $title = get_the_title($query5->post->title); ?>
-                        <h2><?=$title?></h2>
+                        <h1><?=$title?></h1>
                         <ul>
                             <?php $counter = 1;
                             while($field = get_field("logo_$counter")) { ?>
@@ -173,10 +177,8 @@
                 </ul> 
             </div>
         </div>
-
+        </div>
         
-
-        <small>front-page.php</small> 
     </div> 
     <!-- End Content -->
     
