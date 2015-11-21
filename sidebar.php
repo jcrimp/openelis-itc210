@@ -19,11 +19,24 @@
                         </ul>
                 
                     <?php else: //else, show the regular page sidebar ?>
-                        <?php $parent_page = get_top_parent_page_id($post_ID); ?>
-                        <h2><a href="<?php echo get_the_permalink($parent_page); ?>"><?php echo get_the_title($parent_page); ?></a></h2>
+                        <?php //$parent_page = get_top_parent_page_id($post_ID); ?>
+                        <!--<h2><a href="<?php //echo get_the_permalink($parent_page); ?>"><?php //echo get_the_title($parent_page); ?></a></h2>
                         <ul>
-                            <?php wp_list_pages("child_of=$parent_page&title_li="); ?>
+                            <?php //wp_list_pages("child_of=$parent_page&title_li="); ?>
+                        </ul>-->
+                        <?php if($post->post_parent) {
+                            $children = wp_list_pages("title_li=&include=".$post->post_parent."&echo=0");
+                            $children.= wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+                            } 
+                        else {
+                            $children = wp_list_pages("title_li=&include=".$post->ID."&echo=0");
+                            $children.= wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+                        }
+                        if ($children) { ?>
+                        <ul>
+                            <?php echo $children; ?>
                         </ul>
+                        <?php } ?>
                     <?php endif; ?>
                 
                 <?php elseif(!(is_page())) : ?>

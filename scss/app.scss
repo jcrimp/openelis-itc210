@@ -1,3 +1,4 @@
+@import "resets"; 
 @import "settings";
 //@import "foundation";
 
@@ -205,10 +206,12 @@ dl{
 
 ul{
 	margin-left: em(18);
+    list-style-type: disc;
 }
 
 ol{
 	margin-left: em(20);
+    list-style-type: decimal;
 }
 
 li{
@@ -456,7 +459,7 @@ header{
     padding-bottom: 16px;
     
     @media #{$all-sm} {
-        padding-bottom: 0; 
+        //padding-bottom: 0; 
     }
     .nav-social{
         float: right;
@@ -540,6 +543,7 @@ nav ul{
 /* NAV-MAIN */
 
 #nav-main{
+    text-transform: lowercase;
     float: right;
     clear: right;
     margin-top: 50px;
@@ -585,23 +589,23 @@ nav ul{
         
         //when on a top-level page, target only the top level nav link (not all of the links in the dropdown) - and make it bold 
         & > li.current-menu-item > a{
-            font-weight: bold;
             border-bottom: 5px solid $accent-color;
         }
         
         //when on a sub-page, target the top-level link (its ancestor) - and make it bold
         & > li.current-page-ancestor > a{
-            font-weight: bold;
+            border-bottom: 5px solid $accent-color;
         }
         
         //when on a sub page, the make that link in the sub menu dropdown bold
         & > li > ul > li.current-menu-item a{
-             font-weight: bold;
+             background-color: $main-color;
         }
     }
     
     li{
         position: relative;
+        margin-bottom: 0;
         
         &:hover{
             
@@ -658,6 +662,7 @@ nav ul{
 /* NAV-MOBILE */
 
 #nav-mobile{
+    text-transform: lowercase;
     display: none;
     @media #{$all-sm} {
         display: none;
@@ -816,6 +821,10 @@ footer .widget{
         @media all and (max-width: 995px){
             display: block;
         }
+        
+        @media #{$all-sm} {
+            float: none;
+        }
     }
     p{
         display: inline;
@@ -829,6 +838,7 @@ footer .newsletter-container{
     
     @media #{$all-sm} {
        width: 100%; 
+        text-align: center;
     }
 }
 
@@ -848,6 +858,10 @@ input[type="email"].newsletter-email{
         float: none;
         clear: both
     }
+    
+    @media #{$all-sm} {
+        width: 100%;
+    }
 }
 
 input[type="submit"].newsletter-submit{
@@ -860,6 +874,14 @@ footer .copyright-container{
     //padding: 0 15px;
     text-align: center;
     clear: both;
+    
+    a{
+        color: white;
+        
+        &:hover{
+            color: darken($bg-divider-color, 20%);
+        }
+    }
     
     @media #{$all-sm} {
         //width: 100%;
@@ -893,14 +915,24 @@ footer .copyright-container{
 aside.primary{
     #nav-sub a{
         color: $headline-color;
-        
+        padding-bottom: em(6);
         &:hover{
             border-bottom: 5px solid $accent-color;
         }
+        
     }
     
     #nav-sub ul{
         margin-left: 0;
+        li{
+            margin-bottom: em(25);
+            
+            &:first-of-type a{
+                font-size: em(25);
+                font-family: 'aller b', Helvetica, Arial, sans-serif;
+                padding-bottom: em(2);
+            }
+        }
         
         li.current_page_item a{
             border-bottom: 5px solid $accent-color;
@@ -981,6 +1013,7 @@ aside.primary{
         bottom: 0;
         color: white;
         font-size: em(88);
+        font-size: 7vmax;
         margin-bottom: 0;
     }
     img{
@@ -1138,7 +1171,7 @@ article{
 .metaslider .flex-direction-nav a{
 	height: 50px;
 	display: block;
-	background-color: hsla(0,0%,0%,0.15);
+	//background-color: hsla(0,0%,0%,0.15);
     text-shadow: none;
     color: hsla(0,0%,0%,0);
     opacity: 1 !important;
@@ -1147,9 +1180,9 @@ article{
         top: 35%;
     }
     
-    &:hover{
+    /*&:hover{
         background-color: hsla(0,0%,0%,0.3);
-    }
+    }*/
     
     &:before{
         content: "";
@@ -1223,9 +1256,9 @@ article{
     font-weight: bold;
     color: white;
     
-    p{
+    /*p{
         margin-bottom: 0;
-    }
+    }*/
     
     a{
         padding: 10px 30px;
