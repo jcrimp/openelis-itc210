@@ -84,6 +84,25 @@ $text-color: #58585B;
 $headline-color: #344F65;
 $body-color: lighten($bg-color, 5%);
 
+/* RESPONSIVE */
+
+/* will not validate --------- */
+html { 
+	/* don't resize body copy on iPhone */
+	-webkit-text-size-adjust: none;  
+}
+
+@-ms-viewport,		/* IE10 */
+@viewport	{		/* future browsers */
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+/* --------- end will not validate */
+
+
+html{
+	font-size: 16px; /* 1 rem = 16px */ /* set in px so we can use rems */
+}
 
 
 /* FONT FAMILIES */
@@ -1279,6 +1298,8 @@ article{
         color: black;
         font-size: 16px;
         padding: 1em 1rem;
+        bottom: 0;
+        left: 0;
         
         a{
             color: black;
