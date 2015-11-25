@@ -19,8 +19,8 @@
                 <!-- Begin footer social nav -->
                 <nav class="nav-social">
                     <ul>
-                        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-blue-80.png" alt="Facebook" /></a></li>
-                        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-blue-80.png" alt="Twitter" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-white.png" alt="Facebook" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-white.png" alt="Twitter" /></a></li>
                     </ul>
                 </nav>
                 <!-- End footer social nav -->
