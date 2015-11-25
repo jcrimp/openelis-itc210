@@ -10,6 +10,12 @@
     <div class="wrapper footer-secondary">
         <div class="row">
             <div class="large-12 columns">
+                
+                
+                
+                <div class="newsletter-container"><?php dynamic_sidebar(2); ?>   
+    </div>
+                
                 <!-- Begin footer social nav -->
                 <nav class="nav-social">
                     <ul>
@@ -19,8 +25,6 @@
                 </nav>
                 <!-- End footer social nav -->
                 
-                <div class="newsletter-container"><?php dynamic_sidebar(2); ?>   
-    </div>
             </div>
         
         </div>

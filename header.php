@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="style/css" />
-    <link href="<?php bloginfo('template_directory'); ?>/stylesheets/app.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php bloginfo('template_directory'); ?>/scss/app.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?php bloginfo('template_directory'); ?>/stylesheets/flexslider.css" rel="stylesheet" type="text/css" media="all" />
     
     <script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>

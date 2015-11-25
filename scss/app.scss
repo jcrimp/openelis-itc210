@@ -437,20 +437,19 @@ textarea:focus{
     
     .search-field{
         background-color: $body-color;
-        background-image: url('../images/search-icon-white.png');
-        background-position: 5px center;
+        background-image: url('../images/search-icon.png');
+        background-position: em(5) center;
         background-repeat: no-repeat;
-        background-size: 24px 24px;
+        background-size: em(24) em(24);
         border: none;
         cursor: pointer;
-        height: 37px;
+        height: em(37);
         margin: 0;
         padding: 0 0 0 em(34);
         position: relative;
-        
-            cursor: text;
-            outline: 0;
-            width: em(230);
+        cursor: text;
+        outline: 0;
+        width: em(230);
             //border-bottom: 3px solid white;
         
         
@@ -712,7 +711,10 @@ nav ul{
                     display: block;
                     background-color: $main-color;
                     margin-bottom: 0;
-                    padding-left: em(12);
+                    //padding-left: em(12);
+                    a{
+                        text-indent: em(12);
+                    }
                 }
                 
                 &.tap > a:after{
@@ -722,17 +724,17 @@ nav ul{
             
         //when on a top-level page, target only the top level nav link (not all of the links in the dropdown) - and make it bold 
         & > li.current-menu-item > a{
-            font-weight: bold;
+            background-color: $secondary-color;
         }
         
         //when on a sub-page, target the top-level link (its ancestor) - and make it bold
         & > li.current-page-ancestor > a{
-            font-weight: bold;
+            
         }
         
         //when on a sub page, the make that link in the sub menu dropdown bold
         & > li > ul > li.current-menu-item a{
-             font-weight: bold;
+             background-color: $secondary-color;
         }
             
             a{
@@ -766,7 +768,7 @@ footer{
     
     .nav-social{
         float: left;
-        @media #{$all-sm} {
+        @media #{$all-lg} {
             float: none;
             margin: 0 auto;
             width: 86px;
@@ -819,6 +821,10 @@ footer ul.menu > li.menu-item-has-children{
 
 footer ul.menu > li{
     margin-bottom: 0;
+    
+    @media #{$all-lg}{
+        margin-bottom: em(20);
+    }
 }
 
 footer ul.menu > li > a{
@@ -829,68 +835,63 @@ footer ul.menu > li > a{
 }
 
 footer .widget{
-    overflow: hidden;
+    float: right;
+    width: 75%;
+    @media all and (max-width: 925px){
+        width: 85%;
+    }
+    @media #{$all-lg} {
+        width: 100%;
+        float: none;
+    }
     
     h4{
         margin: 0 em(10) 0 0;
-        display: inline-block;
         float: left;
         font-size: em(20);
         text-transform: uppercase;
-        @media all and (max-width: 995px){
-            display: block;
-        }
         
-        @media #{$all-sm} {
+        @media #{$all-lg} {
             float: none;
+            text-align: center;
+            margin-bottom: em(16);
         }
     }
     p{
         display: inline;
     }
-}
 
-footer .newsletter-container{
-    width: 75%;
-    //padding: 0 15px;
-    float: right;
-    
-    @media #{$all-sm} {
-       width: 100%; 
-        text-align: center;
+    form{
+        overflow: hidden;
+        
+        @media #{$all-lg} {
+            margin-bottom: em(20);
+        }   
+        
+        input[type="email"].newsletter-email{
+            width: 75%;
+            float: left;
+            border: none;
+            margin-bottom: 0;
+            
+            @media #{$all-lg} {
+            
+            }
+        }
+
+        input[type="submit"].newsletter-submit{
+            width: 25%;
+            float: none;
+            height: 2em;
+            padding: 0 12px;
+        }
     }
 }
 
-.newsletter-widget{
-    float: right;
-    //height: 1.5em;
-    @media all and (max-width: 995px){
-        float: none;
-    }
-}
 
-input[type="email"].newsletter-email{
-    width: 340px;
-    float: left;
-    border: none;
-    @media all and (max-width: 995px){
-        float: none;
-        clear: both
-    }
-    
-    @media #{$all-sm} {
-        width: 100%;
-    }
-}
 
-input[type="submit"].newsletter-submit{
-    height: 2em;
-    padding: 0 12px;
-}
 
 footer .copyright-container{
-    //width: 50%;
-    //padding: 0 15px;
     text-align: center;
     clear: both;
     
@@ -903,7 +904,7 @@ footer .copyright-container{
     }
     
     @media #{$all-sm} {
-        //width: 100%;
+
     }
 }
 
