@@ -24,7 +24,9 @@
 <!-- begin breadcrumbs row wrapper -->
 <div class="wrapper breadcrumbs">
     <div class="row">
-        <?php custom_breadcrumbs(); ?>
+        <div class="large-12 columns">
+            <?php custom_breadcrumbs(); ?>
+        </div>
     </div>
 </div>
 <!-- end breadcrumbs row wrapper -->
