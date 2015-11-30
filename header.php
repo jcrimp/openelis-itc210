@@ -24,12 +24,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class=" header wrapper">
+    <div class="header wrapper">
     <header class="row nav">
         <div class="large-12 columns">
             <a class="menu-button" href="javascript:;">&#9776;  MENU</a>
+            <a class="search-button"><img src="<?php bloginfo('template_directory'); ?>/images/search-icon-white.png" alt="Search icon" /></a>
+            <?php get_search_form(); ?>
         <!-- Begin header social nav -->
-        <?php get_search_form(); ?>
+        
         <nav class="nav-social">
             <ul>
                 <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-white.png" alt="Facebook" /></a></li>
@@ -37,15 +39,10 @@
             </ul>
         </nav>
         <!-- End header social nav -->
-        
-        
-    
-    
-    
-        
+
         <h1>
             <a href="<?=home_url()?>">
-                <img src="http://placehold.it/200x100?text=logo" alt="OpenELIS Logo" class="logo" />
+                <img src="<?php bloginfo('template_directory'); ?>/images/openelis-logo.png" alt="OpenELIS Logo" class="logo" />
                 <span>OpenELIS Foundation</span>
             </a>  
         </h1>

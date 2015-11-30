@@ -88,6 +88,11 @@
                 e.preventDefault();
                 $('#nav-mobile').toggleClass('show');
             });
+            
+            $('.search-button').click( function(e) {
+                e.preventDefault();
+                $('.search-form').toggleClass('show');
+            });
         });
         
         function close_accordion_section() {
