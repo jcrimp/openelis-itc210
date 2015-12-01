@@ -6,8 +6,17 @@
             $featuredImage = wp_get_attachment_image_src($imgID, 'full' );//get the url of the featured image (returns an array)
             $imgURL = $featuredImage[0]; //get the url of the image out of the array       
         ?>
+        
         <img src="<?=$imgURL?>" alt="Spotlight Image" />
         <?php endif; ?>
+        <?php 
+        $leaflet = get_field( 'leaflet_map_shortcode' );
+        if(!empty($leaflet)): ?>
+            <div class="leaflet-map-container">
+                <?=$leaflet?>
+            </div>
+        <?php endif;
+        ?>
     
     <div class="row">
         <div class="large-12 columns">

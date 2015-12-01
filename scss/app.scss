@@ -1090,6 +1090,10 @@ aside.primary{
     img{
         width: 100%;
     }
+    
+    .leaflet-container img{
+        width: auto;
+    }
 }
 
 /* BREADCRUMBS */
@@ -1360,4 +1364,7 @@ article{
     }
 }
 
-    
+/* LEAFLET */
+.leaflet-bottom{
+    bottom: auto !important;
+}
