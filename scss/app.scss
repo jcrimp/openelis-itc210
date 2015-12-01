@@ -670,6 +670,7 @@ nav ul{
             //when hovering over any menu li, give the sub-menu display: block
             & ul.sub-menu{
                 display: block;
+                z-index: 999;
             }
         }
         
@@ -1367,4 +1368,5 @@ article{
 /* LEAFLET */
 .leaflet-bottom{
     bottom: auto !important;
+    z-index: 1 !important;
 }
