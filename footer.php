@@ -60,10 +60,10 @@
             $('.carousel.flexslider').flexslider({
                 animation: "slide",
                 animationLoop: false,
-                itemWidth: 160,
+                itemWidth: (657.328-40)/3,
                 itemMargin: 20,
                 minItems: 2,
-                maxItems: 6
+                maxItems: 4
             });
             
            $('#nav-main li ul').hide().removeClass('sub-menu');

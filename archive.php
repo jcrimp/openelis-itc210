@@ -6,7 +6,7 @@
 <!-- end breadcrumbs row -->
 
 <!-- begin row that contains content -->
-<div class="row">   
+<div class="row main">   
 
     <?php get_sidebar(); ?>
     

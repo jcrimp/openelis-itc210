@@ -39,8 +39,13 @@
                         <?php } ?>
                     <?php endif; ?>
                 
-                <?php elseif(!(is_page())) : ?>
-                    <h2><a href="<?php echo get_the_permalink(get_page_by_title('News')); ?>">News</a></h2>
+                <?php elseif(!(is_page())) : 
+                    $title_class= "";
+                    if(is_home()):
+                    $title_class= "current_page_item";
+                    endif;
+                ?>
+                    <h2 class="<?=$title_class?>"><a href="<?php echo get_the_permalink(get_page_by_title('News')); ?>">News</a></h2>
                     <?php dynamic_sidebar(1); ?>
                 <?php endif; ?>
             </nav>

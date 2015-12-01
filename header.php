@@ -61,4 +61,4 @@
     </div>
     
 <!-- Begin main div -->
-<div id="main"> 
+<div class="main-container wrapper"> 

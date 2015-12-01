@@ -6,7 +6,7 @@
 <!-- end breadcrumbs row -->
 
 <!-- begin row that contains content -->
-<div class="row"> 
+<div class="row main"> 
     
     <!-- Start Content -->
     <div class="content small-centered large-8 medium-8 columns">

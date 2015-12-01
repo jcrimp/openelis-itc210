@@ -41,4 +41,4 @@
 <!-- end breadcrumbs row wrapper -->
 
 <!-- begin row that contains content -->
-    <div class="row">
+    <div class="row main">
