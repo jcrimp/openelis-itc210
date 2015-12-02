@@ -322,6 +322,21 @@ a:focus{
 }
 
 
+a.link-button{
+    padding: 4px 30px 10px 30px;
+    font-size: 1em;
+    border: 2px solid $accent-color;
+    background: none;
+    color: $accent-color;
+    text-decoration: none;
+        
+    &:hover{
+        background-color: $accent-color;
+        color: $bg-color;
+    }
+}
+
+
 .clear{
     clear: both;
 }
@@ -361,8 +376,8 @@ input[type="password"]{
     padding: em(4);
     height: em(32);
     font-size: em(16);
-    border: 1px solid #C2C2C2; /* grey */
-    background-color: #FFFFFF;
+    border: none;
+    background-color: $body-color;
 }
 
 input[type="checkbox"]{
@@ -374,8 +389,8 @@ textarea{
 	width: 100%;
 	padding: em(4);
 	font-size: em(16);
-	border: 1px solid #C2C2C2; /* grey */ 
-	background-color: white;
+	border: none; 
+	background-color: $body-color;
 }
 
 select{
@@ -386,7 +401,7 @@ input[type="submit"],
 button{
 	outline: none;
 	background-color: $accent-color;
-	color: #FFFFFF;
+	color: $bg-color;
 	border: none;
 	padding: em(9) em(12);
 	font-size: em(16);
@@ -406,8 +421,7 @@ input[type="search"],
 input[type="email"]:focus, 
 input[type="password"]:focus,  
 textarea:focus{
-	background-color: #ffffff;
-	//border: 1px solid #C2C2C2; /* grey */
+	background-color: $body-color;
 }
 
 
@@ -458,14 +472,14 @@ textarea:focus{
             background-size: em(24) em(24);
             border: none;
             cursor: pointer;
-            height: em(37);
+            height: 2em;
             margin: 0;
             padding: 0 0 0 em(34);
             position: relative;
             cursor: text;
             outline: 0;
             width: em(230);
-                //border-bottom: 3px solid white;
+                //border-bottom: 3px solid $bg-color;
             
             
             @media #{$all-sm} {
@@ -481,7 +495,7 @@ textarea:focus{
                     cursor: text;
                     outline: 0;
                     width: 100%;
-                    //border-bottom: 3px solid white;
+                    //border-bottom: 3px solid $bg-color;
                 }*/
                 display: none;
             }
@@ -544,9 +558,9 @@ header{
             display: block;
             float: right;
             text-decoration: none;
-            color: white;
+            color: $bg-color;
             padding: em(6) 0 em(6) em(16);
-            border-left: 1px solid white;
+            border-left: 1px solid $bg-color;
         }
     }
 
@@ -712,7 +726,7 @@ nav ul{
     a{
         display: block;
         padding: 8px 12px;
-        color: white;
+        color: $bg-color;
         &:link, 
         &:visited{
             text-decoration: none;
@@ -786,7 +800,7 @@ nav ul{
                 line-height: 40px;
                 border-bottom: 1px solid $secondary-color;
                 text-decoration: none;
-                color: white;
+                color: $bg-color;
                 padding: 0 10px;
                 &:hover{
                     background-color: $secondary-color;
@@ -799,15 +813,15 @@ nav ul{
 /* FOOTER-MENU */
 
 footer{
-    color: white;
+    color: $bg-color;
     
     a{
-        color: white;
+        color: $bg-color;
         text-decoration: none;
     }
     
     h4{
-        color: white;
+        color: $bg-color;
     }
     
     .nav-social{
@@ -838,7 +852,7 @@ footer{
 
 #nav-footer{
     a{
-        color: white;
+        color: $bg-color;
         text-decoration: none;
         
         &:hover{
@@ -920,6 +934,7 @@ footer .widget{
             float: left;
             border: none;
             margin-bottom: 0;
+            background-color: $bg-color;
             
             @media #{$all-xs} {
                 width: 100%;
@@ -951,7 +966,7 @@ footer .copyright-container{
         margin: 0;
     }
     a{
-        color: white;
+        color: $bg-color;
         
         &:hover{
             color: darken($bg-divider-color, 20%);
@@ -1047,7 +1062,7 @@ aside.primary{
 
 .software{
     img{
-        width: 180px;
+        width: 105px;
     }
 }
 
@@ -1057,13 +1072,14 @@ aside.primary{
     margin: 0;
     padding: 0;
     display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
     
     li{
         width: 140px;
@@ -1074,7 +1090,7 @@ aside.primary{
 
 .get-involved{
     img{
-        max-height: 120px;
+        max-height: 95px;
     }
     & > p{
         margin-top: 0;
@@ -1091,7 +1107,7 @@ aside.primary{
     h1{
         position: absolute;
         bottom: 0;
-        color: white;
+        color: $bg-color;
         font-size: em(88);
         font-size: 7vmax;
         margin-bottom: 0;
@@ -1324,14 +1340,14 @@ article{
 .metaslider .flex-control-paging{
     li a{
         background: transparent;
-        border: 2px solid white;
+        border: 2px solid $bg-color;
         
         &.flex-active{
-            background: white;
+            background: $bg-color;
         }
         
         &:hover{
-            background-color: white;
+            background-color: $bg-color;
         }
     }
 }
@@ -1360,7 +1376,7 @@ article{
     a{
         padding: 10px 30px;
         font-size: 1em;
-        border: 2px solid white;
+        border: 2px solid $bg-color;
         background: none;
         color: white;
         margin-top: 8px;
@@ -1373,19 +1389,19 @@ article{
     
     @media #{$all-lg} {
         position: relative;
-        color: black;
+        color: $main-color;
         font-size: 16px;
         padding: 1em 1rem;
         bottom: 0;
         left: 0;
         
         a{
-            color: black;
-            border: 2px solid black;
+            color: $main-color;
+            border: 2px solid $main-color;
             
             &:hover{
-                color: white;
-                background-color: black;
+                color: $body-color;
+                background-color: $main-color;
             }
         }
     }

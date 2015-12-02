@@ -29,6 +29,7 @@
                     
                     <div id="tab-1" class="tab-content current">
                         <p><?=$tab_1_content?></p>
+                        <p><a href="<?php echo get_the_permalink(get_page_by_title('About')); ?>" class="link-button">Learn More</a></p>
                     </div>
                     <div id="tab-2" class="tab-content">
                         <p><?=$tab_2_content?></p>
