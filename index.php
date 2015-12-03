@@ -25,7 +25,7 @@
                         <?php the_post_thumbnail('small'); ?>
                         <h3><?php the_title(); // get the posting title ?></h3></a>
                         <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?></small><br />
-                        <?php wp_trim_words( the_excerpt(), 30 ); // get post excerpt ?>
+                        <?php wp_trim_excerpt( the_excerpt(), 30 ); // get post excerpt ?>
                       <p class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></p>
                   </li>
                   <?php endforeach; 

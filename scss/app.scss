@@ -41,6 +41,7 @@
 //   "foundation/components/visibility";
 
 @import "wordpress-classes";
+@import "typography";
 
 
 /* FOR DEVELOPMENT ONLY */
@@ -84,6 +85,7 @@ $bg-color: #ECECEB;
 $text-color: #58585B;
 $headline-color: #344F65;
 $body-color: lighten($bg-color, 5%);
+$hover-darken: darken($bg-divider-color, 20%);
 
 /* RESPONSIVE */
 
@@ -103,69 +105,6 @@ html {
 
 html{
 	font-size: 16px; /* 1 rem = 16px */ /* set in px so we can use rems */
-}
-
-
-/* FONT FAMILIES */
-@font-face {
-    font-family: 'aller reg';
-    src: url('../fonts/aller_rg-webfont.eot');
-    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aller_rg-webfont.woff2') format('woff2'),
-         url('../fonts/aller_rg-webfont.woff') format('woff'),
-         url('../fonts/aller_rg-webfont.ttf') format('truetype'),
-         url('../fonts/aller_rg-webfont.svg#allerregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'aller it';
-    src: url('../fonts/aller_it-webfont.eot');
-    src: url('../fonts/aller_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aller_it-webfont.woff2') format('woff2'),
-         url('../fonts/aller_it-webfont.woff') format('woff'),
-         url('../fonts/aller_it-webfont.ttf') format('truetype'),
-         url('../fonts/aller_it-webfont.svg#alleritalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'aller b';
-    src: url('../fonts/aller_bd-webfont.eot');
-    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aller_bd-webfont.woff2') format('woff2'),
-         url('../fonts/aller_bd-webfont.woff') format('woff'),
-         url('../fonts/aller_bd-webfont.ttf') format('truetype'),
-         url('../fonts/aller_bd-webfont.svg#allerbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'aller b it';
-    src: url('../fonts/aller_bdit-webfont.eot');
-    src: url('../fonts/aller_bdit-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aller_bdit-webfont.woff2') format('woff2'),
-         url('../fonts/aller_bdit-webfont.woff') format('woff'),
-         url('../fonts/aller_bdit-webfont.ttf') format('truetype'),
-         url('../fonts/aller_bdit-webfont.svg#allerbold_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
 }
 
 $browser-context: 16;
@@ -303,7 +242,9 @@ figcaption{
 	color: #8F8F8F; /* grey */ 
 }
 
-.content h2:first-of-type{
+.content h1:first-of-type, 
+.content h2:first-of-type, 
+.content:first-child{
     margin-top: 0;
 }
 
@@ -395,6 +336,7 @@ textarea{
 
 select{
 	font-size: em(16);
+    height: em(32);
 }
 
 input[type="submit"], 
@@ -591,21 +533,31 @@ nav ul{
 .nav-social{
 
     ul{
-        margin: 0;
+        margin: em(6) 0 0 0;
         padding-left: 0;
         overflow: hidden;
     }
     
     li{
         float: left;
-        margin-right: em(18);
         margin-bottom: 0;
-        margin-top: em(6);
+        margin-right: em(16);
     }
-    img{
-        height: 20px;
+    
+    a{
+        color: $bg-color;
+        
+        &:hover{
+            color: $hover-darken;
+        }
+    }
+    
+    .flaticon-twitter1:before, 
+    .flaticon-facebook41:before{
+        margin-left: 0;
+        
         @media #{$all-xs} {
-            height: 30px;
+            font-size: em(30);
         }
     }
 }
@@ -829,7 +781,7 @@ footer{
         @media #{$all-lg} {
             float: none;
             margin: 0 auto;
-            width: 86px;
+            width: 120px;
             
             li:last-of-type{
                 margin-right: 0;
@@ -856,7 +808,7 @@ footer{
         text-decoration: none;
         
         &:hover{
-            color: darken($bg-divider-color, 20%);
+            color: $hover-darken;
         }
     }
     @media #{$all-sm}{
@@ -964,6 +916,8 @@ footer .copyright-container{
     
     p{
         margin: 0;
+        font-size: em(14);
+        letter-spacing: em(1.5);
     }
     a{
         color: $bg-color;

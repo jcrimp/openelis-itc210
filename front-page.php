@@ -9,6 +9,7 @@
         if(!empty($metaslider)): 
         echo do_shortcode("$metaslider");
         endif; ?>
+        
         <div class="wrapper division">
             <div class="row our-story center">
                 <div class="small-centered large-8 medium-10 columns">
@@ -20,6 +21,9 @@
                     $tab_1_content = get_field('tab_1_content');
                     $tab_2_content = get_field('tab_2_content');
                     $tab_3_content = get_field('tab_3_content');
+                    $tab_1_link = get_field('page_link_1');
+                    $tab_2_link = get_field('page_link_2');
+                    $tab_3_link = get_field('page_link_3');
                     if(!empty($tab_1_title)): ?>
                     <ul class="tabs">
                         <li class="tab-link current" data-tab="tab-1"><h2><?=$tab_1_title?></h2></li>
@@ -29,13 +33,21 @@
                     
                     <div id="tab-1" class="tab-content current">
                         <p><?=$tab_1_content?></p>
-                        <p><a href="<?php echo get_the_permalink(get_page_by_title('About')); ?>" class="link-button">Learn More</a></p>
+                        <?php if(!empty ($tab_1_link)): ?>
+                        <p><a href="<?=$tab_1_link?>" class="link-button">Learn More</a></p>
+                        <?php endif; ?>
                     </div>
                     <div id="tab-2" class="tab-content">
                         <p><?=$tab_2_content?></p>
+                        <?php if(!empty ($tab_2_link)): ?>
+                        <p><a href="<?=$tab_2_link?>" class="link-button">Learn More</a></p>
+                        <?php endif; ?>
                     </div>
                     <div id="tab-3" class="tab-content">
                         <p><?=$tab_3_content?></p>
+                        <?php if(!empty ($tab_3_link)): ?>
+                        <p><a href="<?=$tab_3_link?>" class="link-button">Learn More</a></p>
+                        <?php endif; ?>
                     </div>
                     <?php endif; ?> 
                 </div>
@@ -140,7 +152,7 @@
                         <p><?=$implement_excerpt?></p>
                     </div>
                 </div>
-                <p class="center"><a href="<?=$permalink?>">Learn More</a></p>
+                <p class="center"><a href="<?=$permalink?>" class="link-button">Learn More</a></p>
             <?php endwhile;
             wp_reset_postdata(); ?>
             </div>

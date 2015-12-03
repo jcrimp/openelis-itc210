@@ -34,8 +34,8 @@
         
         <nav class="nav-social">
             <ul>
-                <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-white.png" alt="Facebook" /></a></li>
-                <li><a href="javascript:;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-white.png" alt="Twitter" /></a></li>
+                <li><a href="javascript:;" target="_blank"><i class="flaticon-facebook41"></i></a></li>
+                <li><a href="javascript:;" target="_blank"><i class="flaticon-twitter1"></i></a></li>
             </ul>
         </nav>
         <!-- End header social nav -->
