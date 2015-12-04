@@ -1436,23 +1436,8 @@ article{
     }
 }
 
-
-/* FAQ PAGE */
-.faq-q:after{
-    content: '+';
-        .show:after{
-    content: " -";
-            }
-}
-.faq-a{
-    display: none;
-    &.show{
-        display: block;
-    }
-}
-
 /* CONTACT PAGE */
 
-wpcf7-list-item{
+.wpcf7-list-item{
     display: block;
 }

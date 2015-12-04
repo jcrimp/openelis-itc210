@@ -19,8 +19,8 @@
                 <!-- Begin footer social nav -->
                 <nav class="nav-social">
                     <ul>
-                        <li><a href="javascript:;" target="_blank"><i class="flaticon-facebook41"></i></li>
-                        <li><a href="javascript:;" target="_blank"><i class="flaticon-twitter1"></i></a></li>
+                        <li><a href="https://www.facebook.com/Openelis-Foundation-301378923313438/" target="_blank" class="social"><i class="flaticon-facebook41"></i></li>
+                        <li><a href="javascript:;" target="_blank" class="social"><i class="flaticon-twitter1"></i></a></li>
                     </ul>
                 </nav>
                 <!-- End footer social nav -->
@@ -53,6 +53,12 @@
     
     <script type="text/javascript">
         $(document).ready(function(){
+            var extLink = $('a:not(.social)').filter(function() {
+                return (this.hostname && location.hostname !== this.hostname);
+            });
+            
+            extLink.append('<i class="flaticon-external1"></i>');
+            
             $('.spotlight.flexslider').flexslider({
                 animation: "slide"
             });

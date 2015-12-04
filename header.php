@@ -34,8 +34,8 @@
         
         <nav class="nav-social">
             <ul>
-                <li><a href="javascript:;" target="_blank"><i class="flaticon-facebook41"></i></a></li>
-                <li><a href="javascript:;" target="_blank"><i class="flaticon-twitter1"></i></a></li>
+                <li><a href="https://www.facebook.com/Openelis-Foundation-301378923313438/" class="social" target="_blank"><i class="flaticon-facebook41"></i></a></li>
+                <li><a href="javascript:;" class="social" target="_blank"><i class="flaticon-twitter1"></i></a></li>
             </ul>
         </nav>
         <!-- End header social nav -->

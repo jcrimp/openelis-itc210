@@ -1930,39 +1930,41 @@ a img.aligncenter {
 /* line 97, _typography.scss */
 .flaticon-external1:before {
   content: "\e005";
+  font-size: 1em;
+  margin-left: .3em;
 }
 
-/* line 100, _typography.scss */
+/* line 102, _typography.scss */
 .flaticon-facebook41:before {
   content: "\e006";
 }
 
-/* line 103, _typography.scss */
+/* line 105, _typography.scss */
 .flaticon-keyboard53:before {
   content: "\e007";
 }
 
-/* line 106, _typography.scss */
+/* line 108, _typography.scss */
 .flaticon-left207:before {
   content: "\e008";
 }
 
-/* line 109, _typography.scss */
+/* line 111, _typography.scss */
 .flaticon-magnifier12:before {
   content: "\e009";
 }
 
-/* line 112, _typography.scss */
+/* line 114, _typography.scss */
 .flaticon-multiple25:before {
   content: "\e00a";
 }
 
-/* line 115, _typography.scss */
+/* line 117, _typography.scss */
 .flaticon-twitter1:before {
   content: "\e00b";
 }
 
-/* line 118, _typography.scss */
+/* line 120, _typography.scss */
 .flaticon-web-programming:before {
   content: "\e00c";
 }
@@ -3399,27 +3401,8 @@ article {
   margin-top: 0;
 }
 
-/* FAQ PAGE */
-/* line 1441, app.scss */
-.faq-q:after {
-  content: '+';
-}
-/* line 1443, app.scss */
-.faq-q:after .show:after {
-  content: " -";
-}
-
-/* line 1447, app.scss */
-.faq-a {
-  display: none;
-}
-/* line 1449, app.scss */
-.faq-a.show {
-  display: block;
-}
-
 /* CONTACT PAGE */
-/* line 1456, app.scss */
-wpcf7-list-item {
+/* line 1441, app.scss */
+.wpcf7-list-item {
   display: block;
 }
