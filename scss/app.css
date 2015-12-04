@@ -2939,77 +2939,19 @@ aside.primary .widget h4 {
 }
 
 /* line 991, app.scss */
-.page:not(.page-id-45) #nav-sub ul li:first-of-type a {
+.page:not(.page-id-45):not(.page-id-44) #nav-sub ul li:first-of-type a {
   font-size: 1.5625em;
   font-family: 'aller b', Helvetica, Arial, sans-serif;
   padding-bottom: 0.125em;
 }
 
-/* HOME PAGE */
-/* line 1000, app.scss */
-.home .center {
-  text-align: center;
-}
-
-/* line 1004, app.scss */
-.home .division {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-}
-
-/* line 1008, app.scss */
-.home h1 {
-  text-transform: uppercase;
-}
-
-/* line 1012, app.scss */
-.home .center a {
-  font-family: 'aller b', Helvetica, Arial, sans-serif;
-  font-size: 1.125em;
-}
-
-/* line 1018, app.scss */
-.software img {
-  width: 105px;
-}
-
-/* line 1024, app.scss */
-.community ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-/* line 1038, app.scss */
-.community ul li {
-  width: 140px;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-/* line 1046, app.scss */
-.get-involved img {
-  max-height: 95px;
-}
-/* line 1049, app.scss */
-.get-involved > p {
-  margin-top: 0;
-}
-
 /* SPOTLIGHT */
-/* line 1057, app.scss */
+/* line 1000, app.scss */
 .spotlight {
   overflow: hidden;
   position: relative;
 }
-/* line 1061, app.scss */
+/* line 1004, app.scss */
 .spotlight h1 {
   position: absolute;
   bottom: 0;
@@ -3018,120 +2960,120 @@ aside.primary .widget h4 {
   font-size: 7vmax;
   margin-bottom: 0;
 }
-/* line 1069, app.scss */
+/* line 1012, app.scss */
 .spotlight img {
   width: 100%;
 }
-/* line 1073, app.scss */
+/* line 1016, app.scss */
 .spotlight .leaflet-container img {
   width: auto;
 }
 
 /* BREADCRUMBS */
-/* line 1080, app.scss */
+/* line 1023, app.scss */
 div.breadcrumbs {
   background-color: #E6E6E5;
 }
 
 /* TABS */
-/* line 1086, app.scss */
+/* line 1029, app.scss */
 ul.tabs {
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-align: center;
 }
-/* line 1092, app.scss */
+/* line 1035, app.scss */
 ul.tabs li {
   background: none;
   display: inline-block;
   padding: 0.625em 1em;
   cursor: pointer;
 }
-/* line 1098, app.scss */
+/* line 1041, app.scss */
 ul.tabs li h2 {
   font-size: 1.25em;
 }
-/* line 1102, app.scss */
+/* line 1045, app.scss */
 ul.tabs li.current {
   border-bottom: 5px solid #5B8F47;
 }
 
-/* line 1109, app.scss */
+/* line 1052, app.scss */
 .tab-content {
   display: none;
 }
-/* line 1112, app.scss */
+/* line 1055, app.scss */
 .tab-content.current {
   display: inherit;
 }
 
-/* line 1117, app.scss */
+/* line 1060, app.scss */
 .content section {
   border-bottom: 1px solid #243F50;
   padding: 1.875em 0;
 }
-/* line 1121, app.scss */
+/* line 1064, app.scss */
 .content section:first-of-type {
   padding-top: 0;
 }
-/* line 1124, app.scss */
+/* line 1067, app.scss */
 .content section:last-of-type {
   border-bottom: none;
 }
-/* line 1128, app.scss */
+/* line 1071, app.scss */
 .content section ul {
   list-style-type: none;
   margin: 0 auto;
   text-align: center;
   padding-left: 0;
 }
-/* line 1135, app.scss */
+/* line 1078, app.scss */
 .content section li {
   display: inline;
   font-size: 18px;
   margin-right: 30px;
 }
 @media all and (max-width: 420px) {
-  /* line 1135, app.scss */
+  /* line 1078, app.scss */
   .content section li {
     display: list-item;
   }
 }
-/* line 1143, app.scss */
+/* line 1086, app.scss */
 .content section li:last-of-type {
   margin-right: 0;
 }
-/* line 1147, app.scss */
+/* line 1090, app.scss */
 .content section li a {
   font-weight: bold;
   text-decoration: none;
 }
 
 /* MAIN CONTENT */
-/* line 1157, app.scss */
+/* line 1100, app.scss */
 article img.attachment-thumbnail {
   float: left;
   margin: 4px 20px 0 0;
 }
 
-/* line 1162, app.scss */
+/* line 1105, app.scss */
 article {
   overflow: hidden;
 }
 
-/* line 1166, app.scss */
+/* line 1109, app.scss */
 .main {
   padding: 1.875em 0;
 }
 
-/* line 1170, app.scss */
+/* line 1113, app.scss */
 .main-container {
   background-color: #ECECEB;
 }
 
 /* ACCORDION */
-/* line 1176, app.scss */
+/* line 1119, app.scss */
 .accordion {
   overflow: hidden;
   /*box-shadow:0px 1px 3px rgba(0,0,0,0.25);*/
@@ -3140,17 +3082,16 @@ article {
 }
 
 /*----- Section Titles -----*/
-/* line 1184, app.scss */
+/* line 1127, app.scss */
 .accordion-section-title {
   width: 100%;
   padding: 5px 0;
   display: inline-block;
   transition: all linear 0.15s;
-  font-size: 1.200em;
   text-decoration: none;
 }
 
-/* line 1193, app.scss */
+/* line 1135, app.scss */
 .accordion-section-title.active,
 .accordion-section-title:hover,
 .accordion-section-title:focus,
@@ -3158,53 +3099,48 @@ article {
   text-decoration: none;
 }
 
-/* line 1200, app.scss */
-.accordion-section:last-child .accordion-section-title {
-  border-bottom: 1px solid #8F8F8F;
-}
-
 /*----- Section Content -----*/
-/* line 1205, app.scss */
+/* line 1144, app.scss */
 .accordion-section-content {
   padding: 15px 0;
   display: none;
 }
 
-/* FLEXSLIDER */
-/* line 1212, app.scss */
+/* METASLIDER */
+/* line 1151, app.scss */
 .metaslider .flexslider {
   border: none;
   margin-bottom: 0;
 }
 
-/* line 1217, app.scss */
+/* line 1156, app.scss */
 .metaslider .flex-nav-prev {
   margin-bottom: 0;
 }
 
-/* line 1221, app.scss */
+/* line 1160, app.scss */
 .metaslider .flex-nav-next {
   margin-bottom: 0;
 }
 
-/* line 1225, app.scss */
+/* line 1164, app.scss */
 .metaslider .slides li .caption-wrap {
   visibility: hidden;
 }
 
-/* line 1229, app.scss */
+/* line 1168, app.scss */
 .metaslider .slides li.flex-active-slide .caption-wrap {
   visibility: visible;
 }
 
 @media all and (max-width: 420px) {
-  /* line 1233, app.scss */
+  /* line 1172, app.scss */
   .metaslider .flex-direction-nav {
     display: none;
   }
 }
 
-/* line 1238, app.scss */
+/* line 1177, app.scss */
 .metaslider .flex-direction-nav a {
   height: 50px;
   display: block;
@@ -3216,12 +3152,12 @@ article {
   }*/
 }
 @media all and (max-width: 825px) {
-  /* line 1238, app.scss */
+  /* line 1177, app.scss */
   .metaslider .flex-direction-nav a {
     top: 35%;
   }
 }
-/* line 1254, app.scss */
+/* line 1193, app.scss */
 .metaslider .flex-direction-nav a:before {
   content: "";
   display: block;
@@ -3231,58 +3167,58 @@ article {
   position: absolute;
   top: 6px;
 }
-/* line 1264, app.scss */
+/* line 1203, app.scss */
 .metaslider .flex-direction-nav a.flex-next {
   right: 0 !important;
 }
-/* line 1267, app.scss */
+/* line 1206, app.scss */
 .metaslider .flex-direction-nav a.flex-next:before {
   content: "";
   background: url("../images/right-arrow.png") no-repeat !important;
   left: 8px;
 }
-/* line 1274, app.scss */
+/* line 1213, app.scss */
 .metaslider .flex-direction-nav a.flex-prev {
   left: 0 !important;
 }
-/* line 1278, app.scss */
+/* line 1217, app.scss */
 .metaslider .flex-direction-nav a.flex-prev:before {
   background: url("../images/left-arrow.png") no-repeat !important;
   left: 8px;
 }
 
-/* line 1285, app.scss */
+/* line 1224, app.scss */
 .metaslider .flex-control-nav {
   bottom: 4%;
   z-index: 900;
 }
 @media all and (max-width: 825px) {
-  /* line 1285, app.scss */
+  /* line 1224, app.scss */
   .metaslider .flex-control-nav {
     display: none;
   }
 }
 
-/* line 1295, app.scss */
+/* line 1234, app.scss */
 .metaslider .flex-control-paging li a {
   background: transparent;
   border: 2px solid #ECECEB;
 }
-/* line 1299, app.scss */
+/* line 1238, app.scss */
 .metaslider .flex-control-paging li a.flex-active {
   background: #ECECEB;
 }
-/* line 1303, app.scss */
+/* line 1242, app.scss */
 .metaslider .flex-control-paging li a:hover {
   background-color: #ECECEB;
 }
 
-/* line 1309, app.scss */
+/* line 1248, app.scss */
 .metaslider .slides li {
   position: relative;
 }
 
-/* line 1317, app.scss */
+/* line 1256, app.scss */
 .metaslider .caption-wrap {
   position: absolute;
   bottom: 5%;
@@ -3295,7 +3231,7 @@ article {
       margin-bottom: 0;
   }*/
 }
-/* line 1330, app.scss */
+/* line 1269, app.scss */
 .metaslider .caption-wrap a {
   padding: 10px 30px;
   font-size: 1em;
@@ -3305,12 +3241,12 @@ article {
   margin-top: 8px;
   text-decoration: none;
 }
-/* line 1339, app.scss */
+/* line 1278, app.scss */
 .metaslider .caption-wrap a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 @media all and (max-width: 825px) {
-  /* line 1317, app.scss */
+  /* line 1256, app.scss */
   .metaslider .caption-wrap {
     position: relative;
     color: #243F50;
@@ -3319,40 +3255,41 @@ article {
     bottom: 0;
     left: 0;
   }
-  /* line 1352, app.scss */
+  /* line 1291, app.scss */
   .metaslider .caption-wrap a {
     color: #243F50;
     border: 2px solid #243F50;
   }
-  /* line 1356, app.scss */
+  /* line 1295, app.scss */
   .metaslider .caption-wrap a:hover {
     color: #f8f8f8;
     background-color: #243F50;
   }
 }
 
-/* line 1364, app.scss */
+/* FLEXSLIDER CAROUSEL */
+/* line 1305, app.scss */
 .flexslider.carousel {
   border: none;
   background-color: #ECECEB;
 }
-/* line 1368, app.scss */
+/* line 1309, app.scss */
 .flexslider.carousel .flex-nav-prev {
   margin-bottom: 0;
 }
-/* line 1372, app.scss */
+/* line 1313, app.scss */
 .flexslider.carousel .flex-nav-next {
   margin-bottom: 0;
 }
-/* line 1376, app.scss */
+/* line 1317, app.scss */
 .flexslider.carousel .slides > li {
   margin-right: 20px;
 }
-/* line 1380, app.scss */
+/* line 1321, app.scss */
 .flexslider.carousel .slides > li:last-of-type {
   margin-right: 0;
 }
-/* line 1385, app.scss */
+/* line 1326, app.scss */
 .flexslider.carousel .flex-direction-nav a {
   height: 50px;
   display: block;
@@ -3367,7 +3304,7 @@ article {
       background-color: hsla(0,0%,0%,0.3);
   }*/
 }
-/* line 1402, app.scss */
+/* line 1343, app.scss */
 .flexslider.carousel .flex-direction-nav a:before {
   content: "";
   display: block;
@@ -3377,29 +3314,112 @@ article {
   position: absolute;
   top: 6px;
 }
-/* line 1412, app.scss */
+/* line 1353, app.scss */
 .flexslider.carousel .flex-direction-nav a.flex-next {
   right: 0 !important;
 }
-/* line 1415, app.scss */
+/* line 1356, app.scss */
 .flexslider.carousel .flex-direction-nav a.flex-next:before {
   content: "";
   background: url("../images/right-arrow.png") no-repeat !important;
   left: 8px;
 }
-/* line 1422, app.scss */
+/* line 1363, app.scss */
 .flexslider.carousel .flex-direction-nav a.flex-prev {
   left: 0 !important;
 }
-/* line 1426, app.scss */
+/* line 1367, app.scss */
 .flexslider.carousel .flex-direction-nav a.flex-prev:before {
   background: url("../images/left-arrow.png") no-repeat !important;
   left: 8px;
 }
 
 /* LEAFLET */
-/* line 1437, app.scss */
+/* line 1378, app.scss */
 .leaflet-bottom {
   bottom: auto !important;
   z-index: 1 !important;
+}
+
+/* HOME PAGE */
+/* line 1385, app.scss */
+.home .center {
+  text-align: center;
+}
+
+/* line 1389, app.scss */
+.home .division {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+/* line 1393, app.scss */
+.home h1 {
+  text-transform: uppercase;
+}
+
+/* line 1397, app.scss */
+.home .center a {
+  font-family: 'aller b', Helvetica, Arial, sans-serif;
+  font-size: 1.125em;
+}
+
+/* line 1403, app.scss */
+.software img {
+  width: 105px;
+}
+
+/* line 1409, app.scss */
+.community ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 1423, app.scss */
+.community ul li {
+  width: 140px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* line 1431, app.scss */
+.get-involved img {
+  max-height: 95px;
+}
+/* line 1434, app.scss */
+.get-involved > p {
+  margin-top: 0;
+}
+
+/* FAQ PAGE */
+/* line 1441, app.scss */
+.faq-q:after {
+  content: '+';
+}
+/* line 1443, app.scss */
+.faq-q:after .show:after {
+  content: " -";
+}
+
+/* line 1447, app.scss */
+.faq-a {
+  display: none;
+}
+/* line 1449, app.scss */
+.faq-a.show {
+  display: block;
+}
+
+/* CONTACT PAGE */
+/* line 1456, app.scss */
+wpcf7-list-item {
+  display: block;
 }

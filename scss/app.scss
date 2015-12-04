@@ -988,67 +988,10 @@ aside.primary{
     }
 }
 
-.page:not(.page-id-45) #nav-sub ul li:first-of-type a{
+.page:not(.page-id-45):not(.page-id-44) #nav-sub ul li:first-of-type a{
     font-size: em(25);
     font-family: 'aller b', Helvetica, Arial, sans-serif;
     padding-bottom: em(2);
-}
-
-
-/* HOME PAGE */
-
-.home .center{
-    text-align: center;
-}
-
-.home .division{
-    padding-top: em(40);
-    padding-bottom: em(40);
-}
-.home h1{
-    text-transform: uppercase;
-}
-
-.home .center a{
-    font-family: 'aller b', Helvetica, Arial, sans-serif;
-    font-size: em(18);
-}
-
-.software{
-    img{
-        width: 105px;
-    }
-}
-
-
-.community ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-  
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    
-    li{
-        width: 140px;
-        text-align: center;
-        margin-bottom: 16px;
-    }
-}
-
-.get-involved{
-    img{
-        max-height: 95px;
-    }
-    & > p{
-        margin-top: 0;
-    }
 }
 
 
@@ -1186,7 +1129,6 @@ article{
     padding:5px 0;
     display:inline-block;
     transition:all linear 0.15s;
-    font-size:1.200em;
 	text-decoration: none;
 }
  
@@ -1197,10 +1139,7 @@ article{
     text-decoration:none;
 }
  
-.accordion-section:last-child .accordion-section-title {
-    border-bottom: 1px solid #8F8F8F;
-}
- 
+
 /*----- Section Content -----*/
 .accordion-section-content {
     padding:15px 0;
@@ -1208,7 +1147,7 @@ article{
 }
 
 
-/* FLEXSLIDER */
+/* METASLIDER */
 .metaslider .flexslider{
 	border: none;
     margin-bottom: 0;
@@ -1361,6 +1300,8 @@ article{
     }
 }
 
+/* FLEXSLIDER CAROUSEL */
+
 .flexslider.carousel{
     border: none;
     background-color: $bg-color;
@@ -1437,4 +1378,81 @@ article{
 .leaflet-bottom{
     bottom: auto !important;
     z-index: 1 !important;
+}
+
+/* HOME PAGE */
+
+.home .center{
+    text-align: center;
+}
+
+.home .division{
+    padding-top: em(40);
+    padding-bottom: em(40);
+}
+.home h1{
+    text-transform: uppercase;
+}
+
+.home .center a{
+    font-family: 'aller b', Helvetica, Arial, sans-serif;
+    font-size: em(18);
+}
+
+.software{
+    img{
+        width: 105px;
+    }
+}
+
+
+.community ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    li{
+        width: 140px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+
+.get-involved{
+    img{
+        max-height: 95px;
+    }
+    & > p{
+        margin-top: 0;
+    }
+}
+
+
+/* FAQ PAGE */
+.faq-q:after{
+    content: '+';
+        .show:after{
+    content: " -";
+            }
+}
+.faq-a{
+    display: none;
+    &.show{
+        display: block;
+    }
+}
+
+/* CONTACT PAGE */
+
+wpcf7-list-item{
+    display: block;
 }

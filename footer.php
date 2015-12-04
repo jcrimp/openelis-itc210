@@ -76,8 +76,6 @@
                 }
             );
             
-            /*$('.menu-item-has-children > a').append('<span>▿</span>')*/
-            
             $('#nav-mobile .menu-item-has-children > a').click( function(e) {
                 e.preventDefault();
                 $(this).parent().toggleClass('tap');
@@ -93,9 +91,18 @@
                 e.preventDefault();
                 $('.search-form').toggleClass('show');
             });
-        });
-        
-        function close_accordion_section() {
+            
+            $('ul.tabs li').click(function(){
+	       	   var tab_id = $(this).attr('data-tab');
+            
+	       	   $('ul.tabs li').removeClass('current');
+	       	   $('.tab-content').removeClass('current');
+            
+	       	   $(this).addClass('current');
+	       	   $("#"+tab_id).addClass('current');
+	        });
+            
+            function close_accordion_section() {
                 $('.accordion .accordion-section-title').removeClass('active');
                 $('.accordion .accordion-section-title span').text('+');
                 $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
@@ -114,21 +121,19 @@
                     $(this).addClass('active');
                     // Open up the hidden content panel
                     $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-                    $('.accordion .accordion-section-title span').text('-'); 
+                    $('.accordion .accordion-section-title.active span').text('-'); 
                 }
                 
                 e.preventDefault();
             });
             
-            $('ul.tabs li').click(function(){
-	       	   var tab_id = $(this).attr('data-tab');
+        });
+        
+        
             
-	       	   $('ul.tabs li').removeClass('current');
-	       	   $('.tab-content').removeClass('current');
             
-	       	   $(this).addClass('current');
-	       	   $("#"+tab_id).addClass('current');
-	       });
+            
+            
         
     </script>  
 
