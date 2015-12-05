@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php get_my_title_tag(); ?></title>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +20,7 @@
     
     <!-- Begin WP Head -->
     <?php wp_head(); ?> 
-<!-- End WP Head -->
+    <!-- End WP Head -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,7 +28,7 @@
     <header class="row nav">
         <div class="large-12 columns">
             <a class="menu-button" href="javascript:;">&#9776;  MENU</a>
-            <a class="search-button"><img src="<?php bloginfo('template_directory'); ?>/images/search-icon-white.png" alt="Search icon" /></a>
+            <a class="search-button"><i class="flaticon-magnifier12"></i></a>
             <?php get_search_form(); ?>
         <!-- Begin header social nav -->
         

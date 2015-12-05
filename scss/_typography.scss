@@ -79,6 +79,7 @@
     font-size: 20px;
     font-style: normal;
     margin-left: 20px;
+    
 }.flaticon-arrow165:before {
 	content: "\e000";
 }
@@ -87,9 +88,15 @@
 }
 .flaticon-chemistry20:before {
 	content: "\e002";
+    font-size: 6.5em;
+    margin: 0;
+    color: $headline-color;
 }
 .flaticon-earth53:before {
 	content: "\e003";
+    font-size: 6.5em;
+    margin: 0;
+    color: $headline-color;
 }
 .flaticon-expand38:before {
 	content: "\e004";
@@ -113,10 +120,16 @@
 }
 .flaticon-multiple25:before {
 	content: "\e00a";
+    font-size: 6.5em;
+    margin: 0;
+    color: $headline-color;
 }
 .flaticon-twitter1:before {
 	content: "\e00b";
 }
 .flaticon-web-programming:before {
 	content: "\e00c";
+    font-size: 6.5em;
+    margin: 0;
+    color: $headline-color;
 }

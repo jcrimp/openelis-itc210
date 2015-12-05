@@ -1,7 +1,11 @@
 <?php get_header(); ?>
-<!-- begin breadcrumbs row -->
-<div class="row breadcrumbs">
-    <?php custom_breadcrumbs(); ?>
+<!-- begin breadcrumbs row wrapper -->
+<div class="wrapper breadcrumbs">
+    <div class="row">
+        <div class="large-12 columns">
+            <?php custom_breadcrumbs(); ?>
+        </div>
+    </div>
 </div>
 <!-- end breadcrumbs row -->
 

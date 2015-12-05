@@ -85,8 +85,6 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-
-
 // Breadcrumbs
 function custom_breadcrumbs() {
        
@@ -322,5 +320,44 @@ function custom_breadcrumbs() {
     }
        
 }
+
+// SEO Title tag
+function get_my_title_tag() {
+	
+	global $post;
+	
+	if (is_front_page()) {//the front page
+		bloginfo('description');
+	}
+	
+	elseif(is_page() || is_single()) {//pages and postings
+		the_title();//the title of the destination page or posting
+	}
+	
+	else{
+		bloginfo('description');
+	}
+	
+	if($post->post_parent) {
+		echo ' | ';
+		echo get_the_title($post->post_parent);
+	}
+	 
+	 echo ' | ';
+	 bloginfo('name'); //site (business) name
+	 //echo ' | ';
+	 //echo 'Seattle, WA';//write out the city and state
+}
+
+// Make Shortcode for 4 column-wide div
+function col_4_shortcode( $atts, $content = null ) {
+	return '<div class="large-4 medium-4 columns sidebar">' . do_shortcode($content) . '</div>';
+}
+add_shortcode( 'sidebar', 'col_4_shortcode' );
+
+function col_8_shortcode( $atts, $content = null ) {
+	return '<div class="large-8 medium-8 columns content">' . do_shortcode($content) . '</div>';
+}
+add_shortcode( 'main', 'col_8_shortcode' );
 
 ?>

@@ -40,8 +40,7 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-@import "wordpress-classes";
-@import "typography";
+
 
 
 /* FOR DEVELOPMENT ONLY */
@@ -120,6 +119,9 @@ $browser-context: 16;
 
   @return $pixels / $context * 1em;
 }
+
+@import "wordpress-classes";
+@import "typography";
 
 
 body{
@@ -408,10 +410,10 @@ textarea:focus{
     
         .search-field{
             background-color: $body-color;
-            background-image: url('../images/search-icon.png');
+            background-image: url('../images/magnifier12.png');
             background-position: em(5) center;
             background-repeat: no-repeat;
-            background-size: em(24) em(24);
+            background-size: em(22) em(22);
             border: none;
             cursor: pointer;
             height: 2em;
@@ -449,9 +451,10 @@ textarea:focus{
         @media #{$all-sm} {
             display: block;
             float: right;
-            padding: em(6) em(16);
-            img{
-                width: 24px;
+            padding-right: em(16);
+            i.flaticon-magnifier12:before{
+                font-size: 24px;
+                color: $bg-color;
             }
         }
     }
@@ -778,10 +781,18 @@ footer{
     
     .nav-social{
         float: left;
+        ul{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+        }
+        
         @media #{$all-lg} {
             float: none;
             margin: 0 auto;
-            width: 120px;
             
             li:last-of-type{
                 margin-right: 0;
@@ -955,11 +966,16 @@ footer .copyright-container{
 
 
 /* SIDEBAR */
-
 aside.primary{
+    
     @media #{$all-md} {
         display: none
     }
+
+    &:first-child{
+        margin-top: 0;
+    }
+
     .current_page_item a{
         border-bottom: 5px solid $accent-color;
     }
@@ -994,6 +1010,9 @@ aside.primary{
     padding-bottom: em(2);
 }
 
+.sidebar:first-child{
+    margin-top: 0;
+}
 
 /* SPOTLIGHT */
 

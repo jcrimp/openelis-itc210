@@ -102,9 +102,9 @@
                             $url = get_the_permalink($query3->post->permalink);
                             $title = get_the_title($query3->post->title);
                         
-                            if(!empty($icon)): ?>
-                            <img src="<?=$icon['url']?>" alt="<?=$icon['alt']?>" />
-                            <?php endif; ?>
+                            //if(!empty($icon)): ?>
+                            <i class="flaticon-earth53"></i>
+                            <?php //endif; ?>
                             <h4>Global</h4>
                             <p><a href="<?=$url?>"><?=$title?></a> | <a href="/locations">Locations</a></p>
                         <?php endwhile;
@@ -135,19 +135,19 @@
                 <h1><?=$title?></h1>
                 <div class="row center">
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><img src="<?=$lab_icon['url']?>" alt="<?=$lab_icon['alt']?>" /></p>
+                        <p class="center"><i class="flaticon-chemistry20"></i></p>
                         <h4>Lab Experts</h4>
                         <p><?=$lab_excerpt?></p>
                     </div>
                 
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><img src="<?=$dev_icon['url']?>" alt="<?=$dev_icon['alt']?>" /></p>
+                        <p class="center"><i class="flaticon-web-programming"></i></p>
                         <h4>Developers</h4>
                         <p><?=$dev_excerpt?></p>
                     </div>
                 
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><img src="<?=$implement_icon['url']?>" alt="<?=$dev_icon['alt']?>" /></p>
+                        <p class="center"><i class="flaticon-multiple25"></i></p>
                         <h4>Implementers</h4>
                         <p><?=$implement_excerpt?></p>
                     </div>
