@@ -3399,9 +3399,10 @@ article {
 /* line 1422, app.scss */
 .software img {
   width: 105px;
+  margin: 25px 0;
 }
 
-/* line 1428, app.scss */
+/* line 1429, app.scss */
 .community ul {
   list-style-type: none;
   margin: 0;
@@ -3415,24 +3416,24 @@ article {
   justify-content: space-around;
   align-items: center;
 }
-/* line 1442, app.scss */
+/* line 1443, app.scss */
 .community ul li {
   width: 140px;
   text-align: center;
   margin-bottom: 16px;
 }
 
-/* line 1450, app.scss */
+/* line 1451, app.scss */
 .get-involved img {
   max-height: 95px;
 }
-/* line 1453, app.scss */
+/* line 1454, app.scss */
 .get-involved > p {
   margin-top: 0;
 }
 
 /* CONTACT PAGE */
-/* line 1460, app.scss */
+/* line 1461, app.scss */
 .wpcf7-list-item {
   display: block;
 }
