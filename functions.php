@@ -76,7 +76,7 @@ function get_sidebar_if_children() {
 } // End get_sidebar_if_children()
 
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 25;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

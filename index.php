@@ -19,13 +19,15 @@
                   $args = array( 'posts_per_page' => 20, 'offset'=> 1 );
                   
                   $myposts = get_posts( $args );
-                  foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                  foreach ( $myposts as $post ) : setup_postdata( $post ); 
+                  $excerpt = get_the_excerpt(); 
+                  $shortexcerpt = wp_trim_words($excerpt, 25, '...')?>
                   <li>
                         <a href="<?php the_permalink(); // link to the posting ?>">
                         <?php the_post_thumbnail('small'); ?>
                         <h3><?php the_title(); // get the posting title ?></h3></a>
                         <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?></small><br />
-                        <?php wp_trim_excerpt( the_excerpt(), 30 ); // get post excerpt ?>
+                        <p><?=$shortexcerpt?></p>
                       <p class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></p>
                   </li>
                   <?php endforeach; 
