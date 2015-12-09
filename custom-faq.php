@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: FAQ
+ * Template Name: FAQ Page
  * Description: Page template for FAQ page
  */
 get_header(); 
