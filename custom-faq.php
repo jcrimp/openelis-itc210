@@ -18,7 +18,7 @@ get_sidebar(); ?>
         <div class="accordion">
             <h3 id="lab-experts">Lab Experts</h3>
             <?php 
-            $args = array( 'post_type' => 'faq', 'posts_per_page' => 30, 'category_name' => 'lab-experts' );
+            $args = array( 'post_type' => 'questions', 'posts_per_page' => 30, 'category_name' => 'lab-experts' );
             $the_query = new WP_Query( $args );             
             //$counter1 = 1;
             ?>
@@ -41,7 +41,7 @@ get_sidebar(); ?>
             
             <h3 id="developers">Developers</h3>
             <?php 
-            $args = array( 'post_type' => 'faq', 'posts_per_page' => 30, 'category_name' => 'developers' );
+            $args = array( 'post_type' => 'questions', 'posts_per_page' => 30, 'category_name' => 'developers' );
             $the_query = new WP_Query( $args ); 
             ?>
             <?php if ( $the_query->have_posts() ) : 
@@ -62,7 +62,7 @@ get_sidebar(); ?>
             
             <h3 id="implementers">Implementers</h3>
             <?php 
-            $args = array( 'post_type' => 'faq', 'posts_per_page' => 30, 'category_name' => 'implementers' );
+            $args = array( 'post_type' => 'questions', 'posts_per_page' => 30, 'category_name' => 'implementers' );
             $the_query = new WP_Query( $args ); 
             ?>
             <?php if ( $the_query->have_posts() ) : 
@@ -83,7 +83,7 @@ get_sidebar(); ?>
             
         </div><!-- end accordion -->
         
-        <small>page-faq.php</small> 
+        <small>custom-faq.php</small> 
     </div> 
     <!-- End Content -->
     
