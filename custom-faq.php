@@ -83,7 +83,7 @@ get_sidebar(); ?>
             
         </div><!-- end accordion -->
         
-        <small>custom-faq.php</small> 
+        <small>page-faq.php</small> 
     </div> 
     <!-- End Content -->
     
