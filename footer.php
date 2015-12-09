@@ -68,7 +68,7 @@
                 animationLoop: false,
                 itemWidth: (657.328-40)/3,
                 itemMargin: 20,
-                minItems: 2,
+                minItems: 1,
                 maxItems: 4
             });
             
@@ -127,7 +127,7 @@
                     $(this).addClass('active');
                     // Open up the hidden content panel
                     $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-                    $('.accordion .accordion-section-title.active span').text('-'); 
+                    $('.accordion .accordion-section-title.active span').text('- '); 
                 }
                 
                 e.preventDefault();

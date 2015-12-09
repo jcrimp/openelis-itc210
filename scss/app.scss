@@ -153,8 +153,8 @@ h4,
 h5, 
 h6{
 	font-family: 'aller b', Helvetica, Arial, sans-serif;
-	margin-bottom: em(5);
-	margin-top: em(8);
+	padding-bottom: em(5);
+	padding-top: em(8);
     color: $headline-color;
 }
 
@@ -162,7 +162,7 @@ p,
 ol, 
 ul, 
 dl{
-	margin-bottom: em(16);
+	padding-bottom: em(16);
 }
 
 ul{
@@ -176,19 +176,19 @@ ol{
 }
 
 li{
-	margin-bottom: em(10);
+	padding-bottom: em(10);
 }
 
 dt{
 	font-family: 'aller b', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	margin-bottom: em(8);
+	padding-bottom: em(8);
 }
 
 dd{
 	margin-left: em(18);
-	margin-bottom: em(12);
+	padding-bottom: em(12);
 }
 
 /*h1{
@@ -244,9 +244,9 @@ figcaption{
 	color: #8F8F8F; /* grey */ 
 }
 
-.content h1:first-of-type, 
-.content h2:first-of-type, 
+.content h1:first-of-type,  
 .content:first-child{
+    padding-top: 0;
     margin-top: 0;
 }
 
@@ -268,10 +268,14 @@ a:focus{
 a.link-button{
     padding: 4px 30px 10px 30px;
     font-size: 1em;
-    border: 2px solid $accent-color;
+    border: 1px solid $accent-color;
     background: none;
     color: $accent-color;
     text-decoration: none;
+    font-family: 'aller b', Helvetica, Arial, sans-serif;
+    border-radius: em(3);
+    text-transform: lowercase;
+    display: inline-block;
         
     &:hover{
         background-color: $accent-color;
@@ -391,7 +395,6 @@ textarea:focus{
         //clear: both;
         @media #{$all-sm} {
             float: none;
-            //margin-top: em(50);
             
             &.show{
                 padding: 50px 0 20px 0;
@@ -536,14 +539,14 @@ nav ul{
 .nav-social{
 
     ul{
-        margin: em(6) 0 0 0;
+        margin: em(2) 0 0 0;
         padding-left: 0;
         overflow: hidden;
     }
     
     li{
         float: left;
-        margin-bottom: 0;
+        padding-bottom: 0;
         margin-right: em(16);
     }
     
@@ -635,7 +638,7 @@ nav ul{
     
     li{
         position: relative;
-        margin-bottom: 0;
+        padding-bottom: 0;
         
         &:hover{
             
@@ -662,6 +665,7 @@ nav ul{
             
             li{
                 width: 160px;
+                padding-bottom: 0;
                 
                 a{
                     display: block;
@@ -710,7 +714,7 @@ nav ul{
             
             li{
                 width: 100%;
-                margin-bottom: 0;
+                padding-bottom: 0;
                 
                 &.menu-item-has-children > a:after{
                     content: " +";
@@ -723,8 +727,7 @@ nav ul{
                 &.tap ul{
                     display: block;
                     background-color: $main-color;
-                    margin-bottom: 0;
-                    //padding-left: em(12);
+                    
                     a{
                         text-indent: em(12);
                     }
@@ -844,17 +847,17 @@ footer ul.menu > li.menu-item-has-children{
 }
 
 footer ul.menu > li{
-    margin-bottom: 0;
+    padding-bottom: 0;
     
     @media #{$all-lg}{
-        margin-bottom: em(20);
+        padding-bottom: em(20);
     }
 }
 
 footer ul.menu > li > a{
     text-transform: uppercase;
     font-family: 'aller b', Helvetica, Arial, sans-serif;
-    margin-bottom: em(20);
+    padding-bottom: em(20);
     display: inline-block;
 }
 
@@ -870,7 +873,7 @@ footer .widget{
     }
     
     h4{
-        margin: 0 em(10) 0 0;
+        padding: 0 em(10) 0 0;
         float: left;
         font-size: em(20);
         text-transform: uppercase;
@@ -878,7 +881,7 @@ footer .widget{
         @media #{$all-lg} {
             float: none;
             text-align: center;
-            margin-bottom: em(16);
+            padding-bottom: em(16);
         }
     }
     p{
@@ -973,7 +976,7 @@ aside.primary{
     }
 
     &:first-child{
-        margin-top: 0;
+        padding-top: 0;
     }
 
     .current_page_item a{
@@ -981,7 +984,7 @@ aside.primary{
     }
 
     #nav-sub h2{
-        margin-bottom: em(25);
+        padding-bottom: em(25);
     }
 
     #nav-sub a{
@@ -1011,7 +1014,7 @@ aside.primary{
 }
 
 .sidebar:first-child{
-    margin-top: 0;
+    padding-top: 0;
 }
 
 /* SPOTLIGHT */
@@ -1026,7 +1029,7 @@ aside.primary{
         color: $bg-color;
         font-size: em(88);
         font-size: 7vmax;
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
     img{
         width: 100%;
@@ -1046,8 +1049,8 @@ div.breadcrumbs{
 /* TABS */
 
 ul.tabs{
-	margin: 0px;
-	padding: 0px;
+	margin: 0 0 em(20) 0;
+	padding: 0;
 	list-style: none;
     text-align: center;
           
@@ -1076,44 +1079,6 @@ ul.tabs{
     }
 }
 
-.content section{
-    //overflow: hidden;
-    border-bottom: 1px solid $main-color;
-    padding: em(30) 0;
-    &:first-of-type{
-        padding-top: 0;
-    }
-    &:last-of-type{
-        border-bottom: none;
-    }
-    
-    ul{
-        list-style-type: none;
-        margin: 0 auto;
-        text-align: center;
-        padding-left: 0;
-    }
-    
-    li{
-        display: inline;
-        font-size: 18px;
-        margin-right: 30px;
-        
-        @media #{$all-xs} {
-            display: list-item;
-        }
-        &:last-of-type{
-            margin-right: 0;
-        }
-        
-        a{
-            font-weight: bold;
-            text-decoration: none;
-        }
-    }
-}
-
-
 
 /* MAIN CONTENT */
 article img.attachment-thumbnail {
@@ -1137,18 +1102,23 @@ article{
 
 .accordion {
     overflow:hidden;
-    /*box-shadow:0px 1px 3px rgba(0,0,0,0.25);*/
-    /*border-radius:3px;*/
-   /* background:#f7f7f7;*/
 }
  
 /*----- Section Titles -----*/
-.accordion-section-title {
+a.accordion-section-title {
     width:100%;
     padding:5px 0;
     display:inline-block;
     transition:all linear 0.15s;
 	text-decoration: none;
+    color: $text-color;
+    border-bottom: 1px solid $bg-divider-color;
+    span{
+        font-size: em(22);
+        color: $accent-color;
+        padding: 0 em(8);
+        font-family: 'aller b', Helvetica, Arial, sans-serif;
+    }
 }
  
 .accordion-section-title.active, 
@@ -1156,12 +1126,13 @@ article{
 .accordion-section-title:focus, 
 .accordion-section-title:active{
     text-decoration:none;
+    color: $text-color;
 }
  
 
 /*----- Section Content -----*/
 .accordion-section-content {
-    padding:15px 0;
+    padding: em(25) 0;
     display:none;
 }
 
@@ -1173,11 +1144,11 @@ article{
 }
 
 .metaslider .flex-nav-prev{
-    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .metaslider .flex-nav-next{
-    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .metaslider .slides li .caption-wrap{
@@ -1231,7 +1202,6 @@ article{
     
     &.flex-prev{
         left: 0 !important; 
-        //opacity: 1 !important;
         
         &:before{
             background: url('../images/left-arrow.png') no-repeat !important;
@@ -1281,17 +1251,13 @@ article{
     font-weight: bold;
     color: white;
     
-    /*p{
-        margin-bottom: 0;
-    }*/
-    
     a{
         padding: 10px 30px;
         font-size: 1em;
-        border: 2px solid $bg-color;
+        border: 1px solid $bg-color;
+        border-radius: em(3);
         background: none;
         color: white;
-        margin-top: 8px;
         text-decoration: none;
         
         &:hover{
@@ -1309,7 +1275,7 @@ article{
         
         a{
             color: $main-color;
-            border: 2px solid $main-color;
+            border: 1px solid $main-color;
             
             &:hover{
                 color: $body-color;
@@ -1342,13 +1308,19 @@ article{
         }
     }
     
+    .flex-direction-nav{
+        @media #{$all-xs}{
+            display: none;
+        }
+    }
+    
     .flex-direction-nav a{
         height: 50px;
         display: block;
         //background-color: hsla(0,0%,0%,0.15);
         text-shadow: none;
         color: hsla(0,0%,0%,0);
-        opacity: 1 !important;
+        //opacity: 1 !important;
         top: 100px;
     
         /*@media #{$all-lg} {
@@ -1365,7 +1337,6 @@ article{
             width: 40px;
             height: 50px;
             background-position: center;
-            position: absolute;
             top: 6px;  
         }
     
@@ -1380,8 +1351,7 @@ article{
         }
     
         &.flex-prev{
-            left: 0 !important; 
-            //opacity: 1 !important;
+            left: 15px !important; 
         
             &:before{
                 background: url('../images/left-arrow.png') no-repeat !important;
@@ -1425,11 +1395,13 @@ article{
     }
 }
 
-
+.community{
+    padding-top: 2.5em;
+}
 .community ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1em 0 0 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1443,16 +1415,42 @@ article{
     li{
         width: 140px;
         text-align: center;
-        margin-bottom: 16px;
+        padding-bottom: 16px;
     }
 }
 
-.get-involved{
-    img{
-        max-height: 95px;
+.get-involved p.icon{
+    padding-bottom: 0;
+}
+
+/* SOFTWARE PAGES */
+
+.software-download{
+    background: $bg-divider-color;
+    padding: em(30);
+    
+    h2{
+        padding-top: 0;
+        @media #{$all-sm}{
+            font-size: 1.25em;
+        }
     }
-    & > p{
-        margin-top: 0;
+    
+    div{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        padding: 1em 0;
+        
+        @media #{$all-lg}{
+            display: block;
+        }
+        
+        p{
+            margin-right: 3em;
+        }
     }
 }
 

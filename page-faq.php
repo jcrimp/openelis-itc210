@@ -25,7 +25,7 @@ get_sidebar(); ?>
             <?php if ( $the_query->have_posts() ) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <div class="accordion-section">
-                    <a class="accordion-section-title" href="#lab-experts-<?=$counter?>"><?php the_title(); ?><span> +</span></a>
+                    <a class="accordion-section-title" href="#lab-experts-<?=$counter?>"><span>+ </span><?php the_title(); ?></a>
                     <div class="accordion-section-content" id="lab-experts-<?=$counter?>">
                         <?php the_content(); ?> 
                     </div><!-- end accordion-section-content -->
@@ -48,7 +48,7 @@ get_sidebar(); ?>
                 //$counter2 = 1; ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <div class="accordion-section">
-                    <a class="accordion-section-title" href="#developers-<?=$counter?>"><?php the_title(); ?><span> +</span></a>
+                    <a class="accordion-section-title" href="#developers-<?=$counter?>"><span> +</span><?php the_title(); ?></a>
                     <div class="accordion-section-content" id="developers-<?=$counter?>">
                         <?php the_content(); ?> 
                     </div><!-- end accordion-section-content -->
@@ -69,7 +69,7 @@ get_sidebar(); ?>
                 //$counter3 = 1; ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <div class="accordion-section">
-                    <a class="accordion-section-title" href="#implementers-<?=$counter?>"><?php the_title(); ?><span> +</span></a>
+                    <a class="accordion-section-title" href="#implementers-<?=$counter?>"><span> +</span><?php the_title(); ?></a>
                     <div class="accordion-section-content" id="implementers-<?=$counter?>">
                         <?php the_content(); ?> 
                     </div><!-- end accordion-section-content -->

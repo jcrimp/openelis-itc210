@@ -135,24 +135,24 @@
                 <h1><?=$title?></h1>
                 <div class="row center">
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><i class="flaticon-chemistry20"></i></p>
+                        <p class="icon"><i class="flaticon-chemistry20"></i></p>
                         <h4>Lab Experts</h4>
                         <p><?=$lab_excerpt?></p>
                     </div>
                 
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><i class="flaticon-web-programming"></i></p>
+                        <p class="icon"><i class="flaticon-web-programming"></i></p>
                         <h4>Developers</h4>
                         <p><?=$dev_excerpt?></p>
                     </div>
                 
                     <div class="large-4 medium-4 columns">
-                        <p class="center"><i class="flaticon-multiple25"></i></p>
+                        <p class="icon"><i class="flaticon-multiple25"></i></p>
                         <h4>Implementers</h4>
                         <p><?=$implement_excerpt?></p>
                     </div>
                 </div>
-                <p class="center"><a href="<?=$permalink?>" class="link-button">Learn More</a></p>
+                <p><a href="<?=$url?>" class="link-button">Learn More</a></p>
             <?php endwhile;
             wp_reset_postdata(); ?>
             </div>

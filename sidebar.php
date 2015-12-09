@@ -11,7 +11,7 @@
                     //if it's the FAQ page
                     if(get_the_title() == "FAQ"):
                     //show the FAQ sidebar ?>
-                        <h2><a href="<?php echo get_the_permalink(get_page_by_title('FAQ')); ?>">FAQ</a></h2>
+                        <h2>FAQ</h2>
                         <ul>
                             <li><a href="#lab-experts">Lab Experts</a></li>
                             <li><a href="#developers">Developers</a></li>
