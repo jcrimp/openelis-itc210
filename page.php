@@ -7,7 +7,7 @@
     
     $children = get_pages('child_of='.$post->ID);
     $ancestors = $post->ancestors;
-    if( count( $children ) != 0 || $ancestors || (get_the_title() == "FAQ") ): ?>
+    if( count( $children ) != 0 || $ancestors || (get_the_title() == "F.A.Q.s") ): ?>
     <div class="content large-8 medium-8 columns">
     <?php else: ?>
     <div class="content small-centered large-8 medium-8 columns">    

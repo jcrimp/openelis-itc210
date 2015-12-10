@@ -235,7 +235,7 @@ blockquote{
 
 .attrib{
 	margin-top: 1.125em;
-	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 figcaption{
@@ -305,7 +305,7 @@ legend{
 }
 
 form p{
-    margin-bottom: 1.25em;	
+    padding-bottom: 1.25em;	
 }
 
 label{
@@ -985,6 +985,7 @@ aside.primary{
 
     #nav-sub h2{
         padding-bottom: em(25);
+        padding-top: 0;
     }
 
     #nav-sub a{
@@ -1134,6 +1135,9 @@ a.accordion-section-title {
 .accordion-section-content {
     padding: em(25) 0;
     display:none;
+    p{
+        text-indent: 2.25em;
+    }
 }
 
 
@@ -1292,11 +1296,11 @@ a.accordion-section-title {
     background-color: $bg-color;
     
     .flex-nav-prev{
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .flex-nav-next{
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
     
     .slides > li{
@@ -1458,4 +1462,12 @@ a.accordion-section-title {
 
 .wpcf7-list-item{
     display: block;
+}
+
+.sidebar h4 + p{
+    padding-bottom: 0;
+}
+
+.sidebar h2:first-of-type{
+    padding-top: 0;
 }

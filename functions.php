@@ -95,7 +95,6 @@ function custom_breadcrumbs() {
     $home_title         = 'Home';
       
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
-    $custom_taxonomy    = 'page-faq';
        
     // Get the query & post information
     global $post,$wp_query;
@@ -110,9 +109,10 @@ function custom_breadcrumbs() {
         echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
         echo '<li class="separator separator-home"> ' . $separator . ' </li>';
            
+        // Archive pages
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
               
-            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
+            echo '<li><a href="' . get_the_permalink(get_page_by_title("News")) . '">News</a></li>' . '<li class="separator">' . $separator . '</li><li class="item-current item-archive"><strong class="bread-current bread-archive">' . 'Archive ' .get_the_archive_title() .  '</strong></li>';
               
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
               
@@ -199,7 +199,8 @@ function custom_breadcrumbs() {
                 echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
               
             }*/ else {
-                  
+                
+                // News (index) page
                 echo '
                 <li><a href="' . get_the_permalink(get_page_by_title("News")) . '">News</a></li>' . '<li class="separator">' . $separator . '</li>
                 <li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
