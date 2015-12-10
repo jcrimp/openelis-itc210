@@ -5,6 +5,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
     
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="style/css" />
     <link href="<?php bloginfo('template_directory'); ?>/scss/app.css" rel="stylesheet" type="text/css" media="all" />

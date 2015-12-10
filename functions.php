@@ -20,6 +20,12 @@ register_sidebar(array(
     'after_title' => '</h4>'
 ));
 
+//enable excerpts on pages
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
 add_theme_support('post-thumbnails');
 add_theme_support('html5', array('search-form'));
 
@@ -76,7 +82,7 @@ function get_sidebar_if_children() {
 } // End get_sidebar_if_children()
 
 function custom_excerpt_length( $length ) {
-	return 25;
+	return 100;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

@@ -225,12 +225,28 @@ small{
 
 blockquote{
 	font-size: 1.125em;
-	font-style: italic;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
+	font-family: 'aller it', Helvetica, Arial, sans-serif;
+	border-top: 1px solid $text-color;
+	border-bottom: 1px solid $text-color;
 	padding: 1em;
 	margin-bottom: 1.5em;
 	margin-top: 1.5em;
+    
+    &:before{
+        content: "“";
+        font-family: Times New Roman, serif;
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 64px;
+        margin: -50px auto 10px auto;
+        padding: 0 6px;
+        background-color: $bg-color;
+    }
+    
+    p{
+        padding-bottom: 0;
+    }
 }
 
 .attrib{
@@ -984,7 +1000,7 @@ aside.primary{
     }
 
     #nav-sub h2{
-        padding-bottom: em(25);
+        padding-bottom: em(16);
         padding-top: 0;
     }
 
@@ -1008,7 +1024,7 @@ aside.primary{
     }
 }
 
-.page:not(.page-id-45):not(.page-id-44) #nav-sub ul li:first-of-type a{
+.page:not(.page-template-custom-faq) #nav-sub ul li:first-of-type a{
     font-size: em(25);
     font-family: 'aller b', Helvetica, Arial, sans-serif;
     padding-bottom: em(2);
@@ -1373,6 +1389,10 @@ a.accordion-section-title {
     z-index: 1 !important;
 }
 
+.leaflet-popup-content p{
+    margin: 0 !important;
+}
+
 /* HOME PAGE */
 
 .home .center{
@@ -1390,6 +1410,15 @@ a.accordion-section-title {
 .home .center a{
     font-family: 'aller b', Helvetica, Arial, sans-serif;
     font-size: em(18);
+}
+
+.our-story{
+    & > div{
+        height: em(350);
+        @media #{$all-xs} {
+            height: auto;
+        }   
+    }
 }
 
 .software{
@@ -1454,6 +1483,26 @@ a.accordion-section-title {
         
         p{
             margin-right: 3em;
+        }
+    }
+}
+
+/* SUPPORT PAGE */
+.page-id-24, 
+.page-id-23{
+    .content ul{
+        margin-left: 0;
+        list-style-type: none;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-around;
+        
+        @media #{$all-xs}{
+            display: block;
+            text-align: center;
         }
     }
 }

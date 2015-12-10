@@ -65,7 +65,7 @@
                 $query1 = new WP_Query( array( 'pagename' => 'software' ) );
                 while($query1->have_posts()):
                     $query1->the_post(); 
-                    $page_excerpt = get_field('page_excerpt');
+                    $page_excerpt = get_the_excerpt();
                         if(!empty($page_excerpt)): ?>
                             <p><?=$page_excerpt?></p>
                         <?php endif; ?>
