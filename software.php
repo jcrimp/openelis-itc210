@@ -14,5 +14,5 @@
     <?php endif; ?>
     </div>
     <p>Need help?<br />
-    Please visit the <a href="/support.php">Support</a> page for more information.</p>
+    Please visit the <a href="<?php echo get_the_permalink(get_page_by_title('Support')); ?>">Support</a> page for more information.</p>
 </div>

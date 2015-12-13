@@ -432,7 +432,7 @@ textarea:focus{
             background-image: url('../images/magnifier12.png');
             background-position: em(5) center;
             background-repeat: no-repeat;
-            background-size: em(22) em(22);
+            background-size: em(20) em(20);
             border: none;
             cursor: pointer;
             height: 2em;
@@ -442,24 +442,9 @@ textarea:focus{
             cursor: text;
             outline: 0;
             width: em(230);
-                //border-bottom: 3px solid $bg-color;
             
             
             @media #{$all-sm} {
-               /* -webkit-transition: width 400ms ease, background 400ms ease;
-                transition: width 400ms ease, background 400ms ease;
-                background-color: transparent;
-                width: 0;
-                //border-bottom: 3px solid $main-color;
-                margin-right: 16px;
-                    &:focus{
-                    background-color: $body-color;
-                    //border: 2px solid #c3c0ab;
-                    cursor: text;
-                    outline: 0;
-                    width: 100%;
-                    //border-bottom: 3px solid $bg-color;
-                }*/
                 display: none;
             }
         }
@@ -615,10 +600,13 @@ nav ul{
         display: flex;
   
         -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: flex-end;
         justify-content: flex-end;
         
         @media #{$all-lg} {
             width: 100%;
+            -webkit-justify-content: space-around;
             justify-content: space-around;
         }
 
@@ -667,7 +655,9 @@ nav ul{
         
         //add a downward pointing arrow to links for menu items that have children (indicate there is a dropdown)
         &.menu-item-has-children > a:after{
-            content: " ▿";
+            font-family: Flaticon;
+            content: " \e004";
+            font-size: .5em;
         }
         
         ul{
@@ -806,6 +796,7 @@ footer{
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
+            -webkit-justify-content: center;
             justify-content: center;
         }
         
@@ -1074,7 +1065,7 @@ ul.tabs{
     li{
       	background: none;
       	display: inline-block;
-      	padding: em(10) em(16);
+      	padding: em(6) em(16);
       	cursor: pointer;
         
         h2{
@@ -1098,14 +1089,16 @@ ul.tabs{
 
 
 /* MAIN CONTENT */
-article img.attachment-thumbnail {
+.content article img.attachment-thumbnail {
     float: left;
 	margin: 4px 20px 0 0;
 }
 
-article{
+.content article{
     overflow: hidden;
+    padding-bottom: em(20);
 }
+
 
 .main{
     padding: em(30) 0;
@@ -1426,6 +1419,10 @@ a.accordion-section-title {
         width: 105px;
         margin: 25px 0;
     }
+    
+    p:first-of-type{
+        padding-top: 20px;
+    }
 }
 
 .community{
@@ -1442,13 +1439,16 @@ a.accordion-section-title {
     display: flex;
   
     -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
+    -webkit-align-items: center;
     align-items: center;
     
     li{
         width: 140px;
         text-align: center;
-        padding-bottom: 16px;
+        padding: 0 1em 1em 1em;
     }
 }
 
@@ -1498,6 +1498,7 @@ a.accordion-section-title {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
         
         @media #{$all-xs}{
@@ -1513,6 +1514,7 @@ a.accordion-section-title {
     display: block;
 }
 
+.sidebar h5 + p, 
 .sidebar h4 + p{
     padding-bottom: 0;
 }

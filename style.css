@@ -12,6 +12,13 @@ Description: A theme for the OpenELIS Foundation, created as a capstone project 
 Version: 1.0
 
 Plugins Used: 
+
+    Advanced Custom Fields: http://www.advancedcustomfields.com/
+        Used to create custom fields, customize the editor view of specific pages,
+        and get and display custom fields. 
+        This includes tab content and community member logos on the Home page.
+        Use the Custom Fields tab in the admin to edit Custom field groups and settings.
+
     Leaflet Maps: https://wordpress.org/plugins/leaflet-map/
         Used to allow the author to add Leaflet Maps with multiple
         points using shortcode in the Posts or Pages WYSIWYG editor. 
@@ -23,10 +30,15 @@ Plugins Used:
         Use the "Contact" tab in the admin to edit forms and mail settings.
 
     Newsletter: http://www.thenewsletterplugin.com/plugins/newsletter
-        Used to allow visitors to sign up for a newsletter via a widget. Use the "Newsletter" tab in the admin to edit settings and email newsletters to subscribers.
+        Used to allow visitors to sign up for a newsletter via a widget. 
+        Use the "Newsletter" tab in the admin to edit settings and 
+        email newsletters to subscribers.
 
     MetaSlider: https://www.metaslider.com/documentation/
-        Used to allow the editor to create and manage image slideshows, and either insert them in posts via shortcode, or by pasting code directly in the template. Use the MetaSlider tab in the admin to manage slidehows.
+        Used to allow the editor to create and manage image slideshows, 
+        and either insert them in posts via shortcode, 
+        or by pasting code directly in the template. 
+        Use the MetaSlider tab in the admin to manage slidehows.
 
 Also Used (packaged with the theme, no installation required): 
     FlexSlider 2: http://flexslider.woothemes.com/

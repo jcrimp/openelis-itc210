@@ -87,7 +87,7 @@
                                 <img src="<?=$icon['url']?>" alt="<?=$icon['alt']?>" />
                             <?php endif; ?>
                             <h4>US</h4>
-                            <p><a href="<?=$url?>"><?=$title?></a> | <a href="/locations">Locations</a></p>
+                            <p><a href="<?=$url?>"><?=$title?></a> | <a href="<?php echo get_the_permalink(get_page_by_title('Locations')); ?>">Locations</a></p>
                         <?php endwhile;
                         wp_reset_postdata(); ?>
                         </div>
@@ -98,15 +98,11 @@
                         
                         while($query3->have_posts()):
                             $query3->the_post(); 
-                            $icon = get_field('thumbnail_icon');
                             $url = get_the_permalink($query3->post->permalink);
-                            $title = get_the_title($query3->post->title);
-                        
-                            //if(!empty($icon)): ?>
+                            $title = get_the_title($query3->post->title); ?>
                             <i class="flaticon-earth53"></i>
-                            <?php //endif; ?>
                             <h4>Global</h4>
-                            <p><a href="<?=$url?>"><?=$title?></a> | <a href="/locations">Locations</a></p>
+                            <p><a href="<?=$url?>"><?=$title?></a> | <a href="<?php echo get_the_permalink(get_page_by_title('Locations')); ?>">Locations</a></p>
                         <?php endwhile;
                         wp_reset_postdata(); ?>
                         </div>  
@@ -124,9 +120,6 @@
                     $query4->the_post(); 
                     $title = get_the_title($query4->post->title);
                     $url = get_the_permalink($query4->post->permalink);
-                    $lab_icon = get_field('lab_experts_icon');
-                    $dev_icon = get_field('developers_icon');
-                    $implement_icon = get_field('implementers_icon');
                     $lab_excerpt = get_field('lab_experts_excerpt');
                     $dev_excerpt = get_field('developers_excerpt');
                     $implement_excerpt = get_field('implementers_excerpt');

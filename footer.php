@@ -37,7 +37,7 @@
                 <!-- End Footer Navigation -->
                 
                 <div class="copyright-container">
-                    <p>&copy; <?php the_time('Y'); ?> OpenELIS Foundation all rights reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a></p> 
+                    <p>&copy; <?php the_time('Y'); ?> OpenELIS Foundation all rights reserved | <a href="<?php echo get_the_permalink(get_page_by_title('Privacy Policy')); ?>">Privacy Policy</a> | <a href="<?php echo get_the_permalink(get_page_by_title('Terms of Use')); ?>">Terms of Use</a></p> 
     </div>
             </div>
         </div>
@@ -134,13 +134,7 @@
             });
             
         });
-        
-        
-            
-            
-            
-            
-        
+   
     </script>  
 
 <!-- Begin WP Footer -->
