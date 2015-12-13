@@ -72,16 +72,6 @@
                 maxItems: 4
             });
             
-           $('#nav-main li ul').hide().removeClass('sub-menu');
-            $('#nav-main li').hover(
-                function () {
-                    $('ul', this).stop().slideDown(300);
-                },
-                function () {
-                    $('ul', this).stop().slideUp(300);
-                }
-            );
-            
             $('#nav-mobile .menu-item-has-children > a').click( function(e) {
                 e.preventDefault();
                 $(this).parent().toggleClass('tap');

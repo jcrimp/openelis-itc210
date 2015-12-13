@@ -644,15 +644,6 @@ nav ul{
         position: relative;
         padding-bottom: 0;
         
-        &:hover{
-            
-            //when hovering over any menu li, give the sub-menu display: block
-            & ul.sub-menu{
-                display: block;
-                z-index: 999;
-            }
-        }
-        
         //add a downward pointing arrow to links for menu items that have children (indicate there is a dropdown)
         &.menu-item-has-children > a:after{
             font-family: Flaticon;
@@ -683,7 +674,21 @@ nav ul{
             }
             
             &.sub-menu{
-                display: none;
+                overflow: hidden;
+                max-height: 0;
+                
+                /* hover off transition */
+                transition: .1s linear;
+            }
+        }
+        
+        &:hover{
+            & ul.sub-menu{
+                z-index: 999;
+                max-height: 600px;
+                
+                /* hover on transition */
+                transition: .5s ease-in-out;
             }
         }
     }
