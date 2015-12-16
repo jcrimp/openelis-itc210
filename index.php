@@ -34,8 +34,6 @@
                   wp_reset_postdata();?>  
               </ul>
 	       </div>
-
-        <small>index.php</small> 
     </div> 
     <!-- End Content -->
     

@@ -82,8 +82,6 @@ get_sidebar(); ?>
             <?php endif; ?>
             
         </div><!-- end accordion -->
-        
-        <small>custom-faq.php</small> 
     </div> 
     <!-- End Content -->
     

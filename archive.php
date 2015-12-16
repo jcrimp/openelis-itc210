@@ -25,7 +25,6 @@
         </article>
         
         <?php endwhile; endif; // end the loop ?>
-        <small>archive.php</small> 
     </div> 
     <!-- End Content -->
     

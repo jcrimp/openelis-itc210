@@ -13,7 +13,6 @@ get_sidebar(); ?>
         </article>
         
         <?php endwhile; endif; // end the loop ?>
-        <small>single.php</small> 
     </div> 
     <!-- End Content -->
     

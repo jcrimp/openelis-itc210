@@ -25,7 +25,6 @@
         </article>
         
         <?php endwhile; endif; // end the loop ?>
-        <small>search.php</small> 
     </div> 
     <!-- End Content -->
     
